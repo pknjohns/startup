@@ -29,4 +29,4 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 ### Rough sketch
 
-![Picture of draft startup display](\pictures\startup spec draft.png)
+![Picture of draft startup display](pictures/startup spec draft.png)
