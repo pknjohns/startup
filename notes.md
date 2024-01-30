@@ -99,3 +99,83 @@ You can also chain the input and output of commands using special characters
 - :q - quit. Use :q! to exit without saving
 
 - Helpful link for learning VM commands: [VM Vheat sheet](https://vim.rtorr.com/)
+
+# HTML Deliverable notes
+
+- footer will be the same for all pages: include link to github repository and author name
+- when you are using the Chrome debugging tools to edit your html file, remember that those changes won't be reflected or saved in your actual html file, so if there is anything crucial that you actually need to change then you need to do it in the source code in VS
+- HTML elements are represented with enclosing tags that may enclose other elements or text. For example, the paragraph element, and its associated tag (p), designate that the text is a structural paragraph of text. When we talk about tags we are referring to a delimited textual name that we use to designate the start and end of an HTML element as it appears in an HTML document. Tags are delimited with the less than (<) and greater than (>) symbols. A closing tag will also have a forward slash (/) before its name
+
+### Useful HTML Elements
+- html - The page container
+- head - Header information
+- title - Title of the page
+- meta - Metadata for the page such as character set or viewport settings
+- script - JavaScript reference. Either a external reference, or inline
+- include -	External content reference
+- body - The entire content body of the page
+- header - Header of the main content
+- footer - Footer of the main content
+- nav - Navigational inputs
+- main - Main content of the page
+- section -	A section of the main content
+- aside -	Aside content from the main content
+- div -	A block division of content
+- span - An inline span of content
+- h<1-9> - Text heading. From h1, the highest level, down to h9, the lowest level
+- p -	A paragraph of text
+- b	- Bring attention
+- table -	Table
+- tr - Table row
+- th - Table header
+- td - Table data
+- ol,ul -	Ordered or unordered list
+- li - List item
+- a -	Anchor the text to a hyperlink
+- img -	Graphical image reference
+- dialog - Interactive component such as a confirmation
+- form - A collection of user input
+- input -	User input field
+- audio -	Audio content
+- video -	Video content
+- svg -	Scalable vector graphic content
+- iframe - Inline frame of another HTML page
+
+- You can include comments in your HTML files by starting the comment with <!-- and ending it with -->. Any text withing a comment block will be completely ignored when the browser renders it.
+
+### Adding Special Characters in HTML: [HTML Intro](https://learn.cs260.click/page/html/introduction/introduction_md)
+
+### HTML Input elements:
+
+Element	Meaning	Example
+form	Input container and submission	<form action="form.html" method="post">
+fieldset	Labeled input grouping	<fieldset> ... </fieldset>
+input	Multiple types of user input	<input type="" />
+select	Selection dropdown	<select><option>1</option></select>
+optgroup	Grouped selection dropdown	<optgroup><option>1</option></optgroup>
+option	Selection option	<option selected>option2</option>
+textarea	Multiline text input	<textarea></textarea>
+label	Individual input label	<label for="range">Range: </label>
+output	Output of input	<output for="range">0</output>
+meter	Display value with a known range	<meter min="0" max="100" value="50"></meter>
+
+### HTML input element types:
+
+text	Single line textual value
+password	Obscured password
+email	Email address
+tel	Telephone number
+url	URL address
+number	Numerical value
+checkbox	Inclusive selection
+radio	Exclusive selection
+range	Range limited number
+date	Year, month, day
+datetime-local	Date and time
+month	Year, month
+week	Week of year
+color	Color
+file	Local file
+submit	button to trigger form submissio
+
+
