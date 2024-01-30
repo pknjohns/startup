@@ -71,3 +71,31 @@ You can also chain the input and output of commands using special characters
 - | - Take the output from the command on the left and pipe, or pass, it to the command on the right
 - '>' - Redirect output to a file. Overwrites the file if it exists
 - '>>' - Redirect output to a file. Appends if the file exists
+
+# VI
+
+- powerful terminal tool for editing files
+
+### Useful commands:
+
+- vi [filename] - open file with name 'filename' in VI
+- :h - help
+- i	- enter insert mode. This will allow you to type and delete text. Use ESC to exit insert mode. No other commands will work while in insert mode.
+- u	- undo
+- CTRL-r- redo
+- gg - go to beginning of file
+- G	- go to end of file
+- /	- search for text that you type after /
+- n	- next search match
+- N	- previous search match
+- v	- visually select text
+- y -	yank or copy selected text to clipboard
+- p -	paste clipboard
+- CTRL-wv -	Split window vertically
+- CTRL-ww	- Toggle windows
+- CTRL-wq	- Close current window
+- :e - Open a file. Type ahead available. If you open a directory you can navigate it in the window
+- :w - write file (save)
+- :q - quit. Use :q! to exit without saving
+
+- Helpful link for learning VM commands: [VM Vheat sheet](https://vim.rtorr.com/)
