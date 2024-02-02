@@ -33,6 +33,6 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 ![Picture of draft startup display](pictures/spec_draft.png)
 
-### HTML Deliverable:
+## HTML Deliverable:
 - I made 4 html files for each page of my startup
 - 
