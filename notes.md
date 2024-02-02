@@ -106,6 +106,11 @@ You can also chain the input and output of commands using special characters
 - when you are using the Chrome debugging tools to edit your html file, remember that those changes won't be reflected or saved in your actual html file, so if there is anything crucial that you actually need to change then you need to do it in the source code in VS
 - HTML elements are represented with enclosing tags that may enclose other elements or text. For example, the paragraph element, and its associated tag (p), designate that the text is a structural paragraph of text. When we talk about tags we are referring to a delimited textual name that we use to designate the start and end of an HTML element as it appears in an HTML document. Tags are delimited with the less than (<) and greater than (>) symbols. A closing tag will also have a forward slash (/) before its name
 
+- Always have a header, main, and footer elements in each html file
+    - main is where you put all the main content of the page
+- for elements that interact with websocket, it's useful to add an id to the element so that when you implement Javascript and websocket, the id will help the websocket/ Javascript know which element to interact with and dynamically update/ modify
+- div elements can help with organization of page and elements within the main element
+
 ### Useful HTML Elements
 - html - The page container
 - head - Header information
@@ -176,6 +181,6 @@ month	Year, month
 week	Week of year
 color	Color
 file	Local file
-submit	button to trigger form submissio
+submit	button to trigger form submission
 
 
