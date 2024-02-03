@@ -1,3 +1,5 @@
+[Link to cs260 webpage](https://learn.cs260.click/)
+
 # GitHub
 
 - GitHub is a valuable tool all developers use to track changes to code and ahve access to version history of their files
