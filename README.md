@@ -34,5 +34,13 @@ Have you and your special someone ever wanted to go on a date but not known what
 ![Picture of draft startup display](pictures/spec_draft.png)
 
 ## HTML Deliverable:
+- Prerequisites: I deployed the Simon HTML to my production environment, placed a link to my GitHub startup repository on my application's homepage, have filled out my README.md, and have made 10 git commits spread consistently throughout the assignment period.
 - I made 4 html files for each page of my startup
-- 
+- I used the HTML tags BODY, NAV, MAIN, HEADER, and FOOTER properly
+- I included links between the four HTML pages on each HTML page
+- I added application textual content on the 'about' HTML page
+- I added a placeholder for 3rd party service calls on the 'about' page where random dating/ uplifting quotes will be pulled from the internet each time a user navigates to the 'about' page. The table in the 'history' page will also display dating history data from other users that will update in real time.
+- I added application images to the 'generator' and 'about' pages.
+- I made the 'index' or homepage have a login placeholder that includes a user name display
+- The table in the 'hsitory' HTML will contain databse data
+- The WebSocket data placeholder is the table in the 'history' HTML, as this is what will update in realtime to reflect the most recent users' most recently committed-to date
