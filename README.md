@@ -42,5 +42,5 @@ Have you and your special someone ever wanted to go on a date but not known what
 - I added a placeholder for 3rd party service calls on the 'about' page where random dating/ uplifting quotes will be pulled from the internet each time a user navigates to the 'about' page. The table in the 'history' page will also display dating history data from other users that will update in real time.
 - I added application images to the 'generator' and 'about' pages.
 - I made the 'index' or homepage have a login placeholder that includes a user name display
-- The table in the 'hsitory' HTML will contain databse data
-- The WebSocket data placeholder is the table in the 'history' HTML, as this is what will update in realtime to reflect the most recent users' most recently committed-to date
+- The application will store login information and the last date that a user has committed to and when they committed to it.
+- The WebSocket data placeholder is the table in the 'history' HTML, as this is what will update in realtime to display the most recent users' most recently committed-to date and when they committed to that date.
