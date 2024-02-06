@@ -34,7 +34,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 ![Picture of draft startup display](pictures/spec_draft.png)
 
 ## HTML Deliverable:
-- Prerequisites: I deployed the Simon HTML to my production environment, placed a link to my GitHub startup repository on my application's homepage, have filled out my README.md, and have made 10 git commits spread consistently throughout the assignment period.
+- Prerequisites: I deployed the Simon HTML to my production environment, placed a link to my GitHub startup repository on my application's homepage, have filled out my README.md, and have made over 10 git commits spread consistently throughout the assignment period.
 - I made 4 html files for each page of my startup
 - I used the HTML tags BODY, NAV, MAIN, HEADER, and FOOTER properly
 - I included links between the four HTML pages on each HTML page
