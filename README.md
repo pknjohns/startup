@@ -44,3 +44,23 @@ Have you and your special someone ever wanted to go on a date but not known what
 - I made the 'index' or homepage have a login placeholder that includes a user name display
 - The application will store login information and the last date that a user has committed to and when they committed to it.
 - The WebSocket data placeholder is the table in the 'history' HTML, as this is what will update in realtime to display the most recent users' most recently committed-to date and when they committed to that date.
+
+## CSS Deliverable:
+
+[x] - done - Prerequisite: Simon CSS deployed to your production environment
+
+[x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+
+[x] - done - Prerequisite: Notes in your startup Git repository README.md file
+
+[x] -  - 30% Header, footer, and main content body. Used flex to layout sections.
+
+[x] -  - 20% Navigation elements. Links highlight on hover.
+
+[x] -  - 10% Responsive to window resizing. Looks great on iPad, desktop, and iPhone.
+
+[x] -  - 20% Application elements. Buttons are using bootstrap
+
+[x] -  - 10% Application text content. Text is displayed using the Merriday font
+
+[x] -  - 10% Application images. I added curved edges around my profile photo.
