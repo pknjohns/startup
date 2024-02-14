@@ -55,7 +55,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] -  - 30% Header, footer, and main content body. Used flex to layout sections.
 
-[x] -  - 20% Navigation elements. Links highlight on hover.
+[x] - done - 20% Navigation elements. Links highlight on hover.
 
 [x] -  - 10% Responsive to window resizing. Looks great on iPad, desktop, and iPhone.
 
