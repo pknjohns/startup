@@ -57,7 +57,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - 20% Navigation elements. Links highlight on hover.
 
-[x] -  - 10% Responsive to window resizing. Looks great on iPad, desktop, and iPhone.
+[x] - done - 10% Responsive to window resizing. Looks great on iPad, desktop, and iPhone.
 
 [x] -  - 20% Application elements. Buttons are using bootstrap
 
