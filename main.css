@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 375px;
-    /*font-family: 'Merriday';*/
   }
   
   header {
@@ -54,3 +53,9 @@ body {
     }
   }
   
+  @media (max-width: 470px) {
+    header {
+      flex-direction: row;
+      flex: 0 145px;
+    }
+  }
