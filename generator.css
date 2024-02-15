@@ -1,5 +1,7 @@
 main {
     justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 5px;
   }
 
 img {
