@@ -35,7 +35,7 @@ body {
   
   menu .nav-item {
     padding: 0.3em 0.3em;
-    justify-content: center;
+    text-align: center;
   }
   
   footer a {
@@ -56,7 +56,10 @@ body {
   
   @media (max-width: 650px) {
     header {
-      flex: 0 145px;
+      flex: 0 135px;
+    }
+    main {
+      flex: 1 calc(100vh - 165px);
     }
     menu {
       flex-direction: column;
