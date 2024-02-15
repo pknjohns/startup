@@ -38,34 +38,39 @@
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-      <h2>User: random user</h2>
-      <label for="category">Category: </label>
-      <select id="category" name="varOptGroup">
-        <optgroup label="date.category.1">
-          <option>option1</option>
-          <option>option2</option>
-        </optgroup>
-        <optgroup label="date.categroy.2">
-          <option>option3</option>
-          <option>option4</option>
-        </optgroup>
-        <optgroup label="date.category.3">
-          <option>option5</option>
-          <option>option6</option>
-        </optgroup>
-      </select>
-      <!-- second dropdown for actual date ideas-->
-      <label for="dateidea">Date: </label>
-      <select id="dateidea" name="varOptGroup">
-        <optgroup label="date.category.1">
-          <option>date idea 1</option>
-          <option>date idea 2</option>
-          <option>date idea 3</option>
-          <option>date idea 4</option>
-          <option>date idea 5</option>
-          <option>date idea 6</option>
-        </optgroup>
-      </select>
+      <div>
+        <h2>User: random user</h2>
+
+        <label for="category">Category: </label>
+        <select class="form-select" id="category" name="varOptGroup">
+          <optgroup label="date.category.1">
+            <option>option1</option>
+            <option>option2</option>
+          </optgroup>
+          <optgroup label="date.categroy.2">
+            <option>option3</option>
+            <option>option4</option>
+          </optgroup>
+          <optgroup label="date.category.3">
+            <option>option5</option>
+            <option>option6</option>
+          </optgroup>
+        </select>
+
+        <!-- second dropdown for actual date ideas-->
+        <label for="dateidea">Date: </label>
+        <select class="form-select" id="dateidea" name="varOptGroup">
+          <optgroup label="date.category.1">
+            <option>date idea 1</option>
+            <option>date idea 2</option>
+            <option>date idea 3</option>
+            <option>date idea 4</option>
+            <option>date idea 5</option>
+            <option>date idea 6</option>
+          </optgroup>
+        </select>
+      </div>
+      
       <button type="submit"  class="btn btn-primary">Commit</button>
 
       <img src ='pictures\randomcouple.webp' alt="random" width = 870px height = 500px/>
