@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-width: 375px;
+    min-width: 415px;
   }
   
   header {
@@ -34,7 +34,8 @@ body {
   }
   
   menu .nav-item {
-    padding: 0 0.3em;
+    padding: 0.3em 0.3em;
+    justify-content: center;
   }
   
   footer a {
@@ -53,9 +54,11 @@ body {
     }
   }
   
-  @media (max-width: 470px) {
+  @media (max-width: 650px) {
     header {
-      flex-direction: row;
       flex: 0 145px;
+    }
+    menu {
+      flex-direction: column;
     }
   }
