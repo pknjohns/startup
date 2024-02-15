@@ -10,3 +10,13 @@ img {
     border-radius: 25px;
     border: 5px solid #fcfcfb;
 }
+
+p {
+    text-align: center;
+    margin: 50px;
+}
+
+#quote {
+    border: solid rgb(182, 182, 182) thin;
+    padding: 10px;
+}
