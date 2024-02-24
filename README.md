@@ -53,14 +53,16 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
-[x] -  - 30% Header, footer, and main content body. Used flex to layout sections.
+[x] - done - Prerequisite: At least 10 git commits spread consistently throughout the assignment period
+
+[x] - done - 30% Header, footer, and main content body. Used flex to layout sections.
 
 [x] - done - 20% Navigation elements. Links highlight on hover.
 
 [x] - done - 10% Responsive to window resizing. Looks great on iPad, desktop, and iPhone.
 
-[x] -  - 20% Application elements. Buttons are using bootstrap
+[x] - done - 20% Application elements. Buttons, dropdowns, and table are using bootstrap
 
-[x] -  - 10% Application text content. Text is displayed using the Merriday font
+[x] - done - 10% Application text content. I added color and decoration to some text
 
-[x] -  - 10% Application images. I added curved edges around my profile photo.
+[x] - done - 10% Application images. I added curved edges and colored edges around my pictures.
