@@ -69,7 +69,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 ## Javascript Deliverable:
 
-[x] -  - Prerequisite: Simon JavaScript deployed to your production environment
+[x] - done - Prerequisite: Simon JavaScript deployed to your production environment
 
 [x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
 
