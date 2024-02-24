@@ -11,6 +11,20 @@
 3) Commit and push (git commit, git push)
 4) Repeat
 
+### Git commands in command prompt:
+- git init : initialize a directory as a git repo
+- git status : tells you what Git is doing
+- git add . : tells Git to start tracking everything it doesn't know about
+- git commit : commits current file version to git repo (add -m to end of command to include a commit message) (add -am to end of command to tell git to add all modified tracked files to commit w/out having to git add them again)
+- git checkout : lets you "checkout" an older version of your file to see what it looks like. Add 'master' at the end to get back tot the top of ther version chain (file version tracked by SHA hashing algorithm)
+- git diff : compares difference between 2 versions of file
+- git branch : create a branch of OG code where you can modify code without affecting the main branch
+- git clone : updateable clone of Github repo
+
+# DNS - Domain Name System
+- DOM = Document Object Model
+- HTTPS - Secure Hypertext Transport Protocol
+
 # Startup ideas
 
 - add ability to upload your own custom date ideas into a category so that other users can select them
@@ -67,6 +81,7 @@
 - printf - print string to the console
 - CTRL-R - Use type ahead to find previous commands
 - CTRL-C - Kill the currently running command
+- chmod - 'change mode', used to change permissions (read, write, execute) of files and directories
 
 You can also chain the input and output of commands using special characters
 
@@ -102,16 +117,20 @@ You can also chain the input and output of commands using special characters
 
 - Helpful link for learning VM commands: [VM Vheat sheet](https://vim.rtorr.com/)
 
-# HTML Deliverable notes
+# HTML
 
 - footer will be the same for all pages: include link to github repository and author name
 - when you are using the Chrome debugging tools to edit your html file, remember that those changes won't be reflected or saved in your actual html file, so if there is anything crucial that you actually need to change then you need to do it in the source code in VS
 - HTML elements are represented with enclosing tags that may enclose other elements or text. For example, the paragraph element, and its associated tag (p), designate that the text is a structural paragraph of text. When we talk about tags we are referring to a delimited textual name that we use to designate the start and end of an HTML element as it appears in an HTML document. Tags are delimited with the less than (<) and greater than (>) symbols. A closing tag will also have a forward slash (/) before its name
 
+- always have index.html be the main homepage for your website, as this is what the web browser will load first
 - Always have a header, main, and footer elements in each html file
     - main is where you put all the main content of the page
 - for elements that interact with websocket, it's useful to add an id to the element so that when you implement Javascript and websocket, the id will help the websocket/ Javascript know which element to interact with and dynamically update/ modify
 - div elements can help with organization of page and elements within the main element
+
+- HTML elements are represented w/enclosed tags (see Useful HTML Elements below)
+- each element can have attributes (id, class, etc). Can delimit attribute values using ' or "
 
 ### Useful HTML Elements
 - html - The page container
@@ -138,8 +157,8 @@ You can also chain the input and output of commands using special characters
 - td - Table data
 - ol,ul -	Ordered or unordered list
 - li - List item
-- a -	Anchor the text to a hyperlink
-- img -	Graphical image reference
+- a - Anchor the text to a hyperlink (use href, not src to set link)
+- img -	Graphical image reference, use src= to access picture and alt= to describe image
 - dialog - Interactive component such as a confirmation
 - form - A collection of user input
 - input -	User input field
@@ -148,41 +167,62 @@ You can also chain the input and output of commands using special characters
 - svg -	Scalable vector graphic content
 - iframe - Inline frame of another HTML page
 
-- You can include comments in your HTML files by starting the comment with <!-- and ending it with -->. Any text withing a comment block will be completely ignored when the browser renders it.
+- You can include comments in your HTML files by using this syntxa: <!-- write comment here -->. Any text within a comment block will be completely ignored when the browser renders it.
 
 ### Adding Special Characters in HTML: [HTML Intro](https://learn.cs260.click/page/html/introduction/introduction_md)
 
 ### HTML Input elements:
 
-Element	Meaning	Example
-form	Input container and submission	<form action="form.html" method="post">
-fieldset	Labeled input grouping	<fieldset> ... </fieldset>
-input	Multiple types of user input	<input type="" />
-select	Selection dropdown	<select><option>1</option></select>
-optgroup	Grouped selection dropdown	<optgroup><option>1</option></optgroup>
-option	Selection option	<option selected>option2</option>
-textarea	Multiline text input	<textarea></textarea>
-label	Individual input label	<label for="range">Range: </label>
-output	Output of input	<output for="range">0</output>
-meter	Display value with a known range	<meter min="0" max="100" value="50"></meter>
+<img src = https://github.com/pknjohns/startup/assets/137959114/af2ca472-5a6d-42db-9aed-d1a503fec369>
 
 ### HTML input element types:
 
-text	Single line textual value
-password	Obscured password
-email	Email address
-tel	Telephone number
-url	URL address
-number	Numerical value
-checkbox	Inclusive selection
-radio	Exclusive selection
-range	Range limited number
-date	Year, month, day
-datetime-local	Date and time
-month	Year, month
-week	Week of year
-color	Color
-file	Local file
-submit	button to trigger form submission
+<img src = https://github.com/pknjohns/startup/assets/137959114/d3c1ae83-d899-473e-a6b8-1151944013ce>
+- In order to create an input you specify the desired type attribute along with any other attribute associated with that specific input. Here is an example of a checked radio button and its associated label.
+
+```
+<label for="checkbox1">Check me</label> <input type="checkbox" name="varCheckbox" value="checkbox1" checked />
+```
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/290d830e-d724-448f-85e0-911c63d62375>
 
 
+# CSS
+
+3 ways to associate CSS with HTML:
+1) add style attribute to HTML element
+2) use style element in head element of document to define CSS rules w/in HTML file
+3) use the link method to create a hyperlink reference to an external file containing CSS rules
+
+ <img src = https://github.com/pknjohns/startup/assets/137959114/488fc14f-65cc-4cf9-b522-fd0529ece661>
+
+### CSS Selectors
+- How you actually select which HTML elements the CSS rules apply to
+- format = element {CSS rules}
+- Descendants = all elements nested w/in an element
+- Children = immediate elements (one level below) nested in parent/ main element
+- Siblings: elements that share the same parent & are at the same lvl of hierarchy
+    - general siblings are all sibling elements that follow a specificed element, regardless of position/order
+    - adjacent siblings are siblings that immediately follow each other
+
+- Combinators:
+    - descendant: element1 element2 {}
+    - child: element > child
+    - general sibling: element ~ sibling
+    - adjacent sibling: element + sibling
+
+- '#' is for id
+- '.' to access class within an element
+
+### CSS Declarations
+
+# Javascript
+- async/await puts all the code after it in a .then box
+-     async functions have to return a promise
+- can only await on an async func
+
+### Regular Expressions:
+- use colon to define objects, not '='
+- for json, use {"variable":"value"}
+-     only supports double quotes, name has to be in double quotes
+-     doesn't support undefined
