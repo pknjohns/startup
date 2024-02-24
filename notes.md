@@ -178,6 +178,8 @@ You can also chain the input and output of commands using special characters
 ### HTML input element types:
 
 <img src = https://github.com/pknjohns/startup/assets/137959114/d3c1ae83-d899-473e-a6b8-1151944013ce>
+
+
 - In order to create an input you specify the desired type attribute along with any other attribute associated with that specific input. Here is an example of a checked radio button and its associated label.
 
 ```
