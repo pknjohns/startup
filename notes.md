@@ -180,11 +180,9 @@ You can also chain the input and output of commands using special characters
 <img src = https://github.com/pknjohns/startup/assets/137959114/d3c1ae83-d899-473e-a6b8-1151944013ce>
 
 
-- In order to create an input you specify the desired type attribute along with any other attribute associated with that specific input. Here is an example of a checked radio button and its associated label.
+- In order to create an input you specify the desired type attribute along with any other attribute associated with that specific input. Here is an example of a checked radio button and its associated label:
 
-```
-<label for="checkbox1">Check me</label> <input type="checkbox" name="varCheckbox" value="checkbox1" checked />
-```
+`<label for="checkbox1">Check me</label> <input type="checkbox" name="varCheckbox" value="checkbox1" checked />`
 
 <img src = https://github.com/pknjohns/startup/assets/137959114/290d830e-d724-448f-85e0-911c63d62375>
 
@@ -213,8 +211,8 @@ You can also chain the input and output of commands using special characters
     - general sibling: element ~ sibling
     - adjacent sibling: element + sibling
 
-- '#' is for id (id selector)
-- '.' to access class within an element (class selector)
+- `#` is for id (id selector)
+- `.` to access class within an element (class selector)
 - For attribute selector, put: `element[attribute]`
 - for pseudo (positional, mouse, attributes, etc) selector: `element:thing`
 
@@ -230,7 +228,7 @@ You can also chain the input and output of commands using special characters
 <img src = https://github.com/pknjohns/startup/assets/137959114/fcf3c32f-e696-44e6-9612-52316f93b47e>
 
 ### Animation:
-- in declaration, add `animation-name` and `animation-duration` features, then create an `@keyframes animatino-name` delcaration containing the sequence of what happens when
+- in declaration, add `animation-name` and `animation-duration` features, then create an `@keyframes animation-name` delcaration containing the sequence of what happens when
 
 ### Responsive design:
 
@@ -253,14 +251,79 @@ You can also chain the input and output of commands using special characters
 <img src = https://github.com/pknjohns/startup/assets/137959114/326442f6-1407-4230-bc60-1f9d3a824a72>
 
 ### JSON:
+- JavaScript Object Notation
+- good for sharing & storing data
+- easily convertible to and from JavaScript objects
+- contains following data types: string, number, boolean, array, object, or null
+    - can't reperesent the undefined object
+- use colon to define objects, not '='
+- for json, use {"name":"value"}
+- Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes
+- convert object to JSON using JSON.stringify
+- convert JSON to obect using JSON.parse
+- only supports double quotes `""`
 
+### Objects & Classes
+- collection of name-value pairs called properties
+- the poperty name must be a string or symbol
+- to create object: `const obj - new Object({name: value}`
+    - you can also declare a variable of object time w/ the object-literal syntax: `const obj = {name: value, name1: value1}`
+- once the object is declared, you can add new poperties by: `obj.newName = newValue;` or `obj['newName'] = newValue;`
+    - this also works with assigning functions to an object
+- Useful object functions:
 
-- async/await puts all the code after it in a .then box
+<img src = https://github.com/pknjohns/startup/assets/137959114/012b7e8d-3454-45a5-9b33-d7d4fab57c8b>
+
+- any function that returns an object is considered a constructor and can be invoked with the `new` operator
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/3f64559d-0f06-402f-a8f8-cb663b529b02>
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/80b3d2e0-2f59-4a75-a02f-23dd9d7266a7>
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/a81cb036-6ec2-4db4-92ab-0e817899f4cf>
+
+### Regular Expressions
+<img src = https://github.com/pknjohns/startup/assets/137959114/338d105c-b8b1-4b9c-82c6-6cb26fa3e19b>
+
+### Rest and Spread
+- allows you to create a function that takes any unknown number of parameters
+- to define a rest parameter, just add `...` in front of the last parameter in your function declaration
+- Spread does the opposite(splits apart an iterable object for each of the functions parameters. Do this by adding `...` in front of the single object you're inputting into the function w/ multiple parameters
+
+### Exceptions
+`try {
+    // normal execution code
+} catch (err) {
+    // exception handling code
+} finally {
+    // always called code
+}`
+
+- can use fallbakcs to make sure you always return something (it's the backup code that you'll run in the catch sequence if the try block fails
+
+### Destructuring
+- a way to copy individual items out of existing ones and assign them to new variables
+- Syntax: `const [b,c] = a;`, where a is an array and b and c are the new variables
+
+### Scope
+- Understanding JavaScript scope is essential for making your programs run as you expect. Scope is defined as the variables that are visible in the current context of execution. JavaScript has four different types of scope:
+    - Global: Visible to all code
+    - Module: Visible to all code running in a module
+    - Function: Visible within a function
+    - Block: Visible within a block of code delimited by curly braces
+
+### Document Object Model (DOM)
+- object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML.
+- The browser provides access to the DOM through a global variable name document that points to the root element of the DOM.
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/f573d2a1-f0f7-4d62-963b-9e7564a46773>
+
+### Promises
+- used for performing asynchronous functions that take a long time so that background code can run while the current code is still processing
+- has two parameters: `resolve` and `reject`
+- has 3 functions: `then` (called if promise is fulfilled),`catch` (called if promise is rejected), and `finally` (always called after all processing is completed).
+
+### Async/ await
+- async/await puts all the code after it in a `.then` box
     - async functions have to return a promise
 - can only await on an async func
-
-### Regular Expressions:
-- use colon to define objects, not '='
-- for json, use {"variable":"value"}
-    - only supports double quotes, name has to be in double quotes
-    - doesn't support undefined
