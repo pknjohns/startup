@@ -213,10 +213,31 @@ You can also chain the input and output of commands using special characters
     - general sibling: element ~ sibling
     - adjacent sibling: element + sibling
 
-- '#' is for id
-- '.' to access class within an element
+- '#' is for id (id selector)
+- '.' to access class within an element (class selector)
+- For attribute selector, put: `element[attribute]`
+- for pseudo (positional, mouse, attributes, etc) selector: `element:thing`
 
-### CSS Declarations
+### CSS Declarations:
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/c8b3c7c8-9ad8-4202-9e9a-f0eff158ce84>
+
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/2d08cf50-8bc7-430d-8bcc-277d98e65e3d>
+
+
+### Units:
+<img src = https://github.com/pknjohns/startup/assets/137959114/fcf3c32f-e696-44e6-9612-52316f93b47e>
+
+### Animation:
+- in declaration, add `animation-name` and `animation-duration` features, then create an `@keyframes animatino-name` delcaration containing the sequence of what happens when
+
+### Responsive design:
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/0765ba9a-474f-4594-9ad2-7c4280aac475>
+- Set responsive design by saying: `class = desired responsive design`
+- Media queries:
+<img src = https://github.com/pknjohns/startup/assets/137959114/fa2f0945-7f43-4cfd-a6a2-be927bee053b>
 
 # Javascript
 - async/await puts all the code after it in a .then box
