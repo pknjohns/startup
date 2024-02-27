@@ -235,17 +235,32 @@ You can also chain the input and output of commands using special characters
 ### Responsive design:
 
 <img src = https://github.com/pknjohns/startup/assets/137959114/0765ba9a-474f-4594-9ad2-7c4280aac475>
-- Set responsive design by saying: `class = desired responsive design`
+
+- Set responsive design by saying `class = desired responsive design`
 - Media queries:
 <img src = https://github.com/pknjohns/startup/assets/137959114/fa2f0945-7f43-4cfd-a6a2-be927bee053b>
 
 # Javascript
+
+- to add javascript to html, you can either put the javascript directly into the html using a <script> element or by using the `src` attribute of the script element
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/e7579cb1-8c2a-4272-ab6c-dcba4b105c76>
+
+### Arrow function:
+- special type of function that replaces need for `function` keyword
+
+### Arrays:
+<img src = https://github.com/pknjohns/startup/assets/137959114/326442f6-1407-4230-bc60-1f9d3a824a72>
+
+### JSON:
+
+
 - async/await puts all the code after it in a .then box
--     async functions have to return a promise
+    - async functions have to return a promise
 - can only await on an async func
 
 ### Regular Expressions:
 - use colon to define objects, not '='
 - for json, use {"variable":"value"}
--     only supports double quotes, name has to be in double quotes
--     doesn't support undefined
+    - only supports double quotes, name has to be in double quotes
+    - doesn't support undefined
