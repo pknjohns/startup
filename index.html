@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date Generator HTML</title>
 
+    <script src="login.js"></script>
     <link rel="stylesheet" href="main.css" />
 
     <!-- Include bootstrap CSS framework -->
@@ -40,12 +41,10 @@
     <main class="container-fluid bg-secondary text-center">
       <h1>Welcome</h1>
       <p>Login to find dates</p>
-      <form method="get" action="generator.html">
-        <label for="name">Name</label>
+      <div>
         <input type="text" id="name" placeholder="Your name here" />
-        <button type="submit"  class="btn btn-primary">Login</button>
-        <button type="submit"  class="btn btn-primary">Register</button>
-      </form>
+        <button class="btn btn-primary" onclick="login()">Login</button>
+      </div>
     </main>
 
     <footer class="bg-dark text-white-50">
