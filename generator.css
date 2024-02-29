@@ -25,6 +25,7 @@ label {
   margin: 5px;
 }
 
-#commit {
+.btn-success {
   margin-bottom: 15px;
+  background-color: green;
 }
