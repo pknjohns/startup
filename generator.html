@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator</title>
     
-    <script src="generator.js"></script>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="generator.css" />
 
@@ -40,7 +39,7 @@
 
     <main class="container-fluid bg-secondary text-center">
       <div id="dates">
-        <h2>User: random user</h2>
+        <h2 id="playerHeader">User: Random User</h2>
 
         <label for="category">Date Category: </label>
         <select class='form-select' id="category" onchange="getIdeas(this);">
@@ -69,5 +68,8 @@
         <a class="text-reset" href="https://github.com/pknjohns/startup.git">GitHub</a>
       </div>
     </footer>
+
+    <script src="generator.js"></script>
+
   </body>
 </html>

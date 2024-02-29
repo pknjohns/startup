@@ -1,3 +1,6 @@
+const header = document.getElementById("playerHeader");
+header.textContent = "User: " + getPlayerName();
+
 function getIdeas(selectObj) {
     const idx = selectObj.selectedIndex;
     const value = selectObj.options[idx].value;
@@ -171,7 +174,21 @@ function saveHist() {
     const userName = this.getPlayerName()
     const date = new Date().toLocaleDateString();
 
-    //const newActivity = { name: userName, activity: activity, date: date};
+    idea = document.getElementById('ideas');
+    idx = idea.selectedIndex;
+    const activity = idea.options[idx].text
 
+    const newActivity = { name: userName, activity: activity, date: date};
+
+    let history = [];
+
+    const historyText = localStorage.getItem('history');
+    if (historyText) {
+        history = JSON.parse(historyText);
+    }
+
+    history.push(newActivity);
+
+    localStorage.setItem('hist', JSON.stringify(history))
     reset(document.getElementById('ideas'))
 }
