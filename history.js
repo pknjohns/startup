@@ -15,9 +15,9 @@ function loadHist() {
         const dateTdEl = document.createElement('td');
   
         positionTdEl.textContent = i + 1;
-        nameTdEl.textContent = score.name;
-        activityTdEl.textContent = score.score;
-        dateTdEl.textContent = score.date;
+        nameTdEl.textContent = hist.name;
+        activityTdEl.textContent = hist.activity;
+        dateTdEl.textContent = hist.date;
   
         const rowEl = document.createElement('tr');
         rowEl.appendChild(positionTdEl);

@@ -24,6 +24,8 @@ function getOutdoor() {
 
     const def = document.createElement('option');
     def.textContent = 'Which idea will you pick...?';
+    def.disabled = true;
+    def.selected = true;
 
     const idea1 = document.createElement('option');
     idea1.text = 'Go on a hike';
@@ -66,6 +68,8 @@ function getNoPrep() {
 
     const def = document.createElement('option');
     def.textContent = 'Which idea will you pick...?';
+    def.disabled = true;
+    def.selected = true;
 
     const idea1 = document.createElement('option');
     idea1.text = 'Watch a movie';
@@ -108,6 +112,8 @@ function getCommunity() {
 
     const def = document.createElement('option');
     def.textContent = 'Which idea will you pick...?';
+    def.disabled = true;
+    def.selected = true;
 
     const idea1 = document.createElement('option');
     idea1.text = 'Go to a BYU sports event';
@@ -147,6 +153,25 @@ function getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery user';
 }
 
-function saveHist() {
+function reset(selectEl) {
+    clear(selectEl)
 
+    const def = document.createElement('option');
+    def.textContent = 'Please select a date category to view date ideas';
+    def.disabled = true;
+    def.selected = true;
+
+    selectEl.add(def);
+
+    cat = document.getElementById('category');
+    cat.selectedIndex = 0;
+}
+
+function saveHist() {
+    const userName = this.getPlayerName()
+    const date = new Date().toLocaleDateString();
+
+    //const newActivity = { name: userName, activity: activity, date: date};
+
+    reset(document.getElementById('ideas'))
 }
