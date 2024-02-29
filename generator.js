@@ -7,7 +7,7 @@ function getIdeas(selectObj) {
     } else if (value === "noprep") {
         getNoPrep();
     } else if (value === "community") {
-        getCommnuity();
+        getCommunity();
     }
 }
 
@@ -141,4 +141,12 @@ function getCommunity() {
     selectEl.add(idea4);
     selectEl.add(idea5);
     selectEl.add(idea6);
+}
+
+function getPlayerName() {
+    return localStorage.getItem('userName') ?? 'Mystery user';
+}
+
+function saveHist() {
+
 }
