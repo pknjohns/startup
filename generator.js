@@ -4,6 +4,10 @@ function getIdeas(selectObj) {
     
     if (value === "outdoor") {
         getOutdoor();
+    } else if (value === "noprep") {
+        getNoPrep();
+    } else if (value === "community") {
+        getCommnuity();
     }
 }
 
