@@ -1,9 +1,3 @@
-/*document.getElementById('category').addEventListener('change', function() {
-    if (this.value === 'outdoor') {
-       getOutdoor();
-    }
-});*/
-
 function getIdeas(selectObj) {
     const idx = selectObj.selectedIndex;
     const value = selectObj.options[idx].value;
@@ -13,16 +7,19 @@ function getIdeas(selectObj) {
     }
 }
 
+function clear(selectEl) {
+    while (selectEl.options.length > 0) {
+        selectEl.remove(0);
+    }
+}
+
 function getOutdoor() {
 
-    // Create dropdown elements w/date ideas from corresponding category
-    const labelEl = document.createElement('label');
-    labelEl.textContent = 'Date:';
-
+    // Get ideas dropdown
     const selectEl = document.getElementById('ideas');
 
-    //const def = document.createElement('option disabled selected');
-    //def.textContent = 'Which idea will you pick...?';
+    const def = document.createElement('option');
+    def.textContent = 'Which idea will you pick...?';
 
     const idea1 = document.createElement('option');
     idea1.text = 'Go on a hike';
@@ -43,17 +40,17 @@ function getOutdoor() {
     idea6.text = 'Rent a tandem bike from BYU Outdoors Unlimited';
 
     //this is the div container where the select elements are held
-    const container = document.getElementById('#dates');
+    const container = document.getElementById('dates');
 
-    //Create dropdown
+    //Remove current ideas in ideas dropdown
+    clear(selectEl)
+
+    //Add new ideas to dropdown
+    selectEl.add(def);
     selectEl.add(idea1);
     selectEl.add(idea2);
     selectEl.add(idea3);
     selectEl.add(idea4);
     selectEl.add(idea5);
     selectEl.add(idea6);
-
-    //Add dropdown to div container in generator html
-    container.appendChild(labelEl);
-    container.appendChild(selectEl);
 }
