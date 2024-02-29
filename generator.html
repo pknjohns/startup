@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator</title>
     
+    <script src="generator.js"></script>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="generator.css" />
 
@@ -38,20 +39,20 @@
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-      <div>
+      <div id="dates">
         <h2>User: random user</h2>
 
         <label for="category">Date Category: </label>
-        <select class="form-select" id="category" name="varOptGroup">
+        <select class='form-select' id="category" onchange="getIdeas(this);">
           <option disabled selected>What are you in the mood for...?</option>
-          <option id="outdoor">Outdoor dates</option>
-          <option id="noprep">No-prep dates</option>
-          <option id="community">Get-to-know-your-community dates</option>
+          <option value="outdoor">Outdoor dates</option>
+          <option value="noprep">No-prep dates</option>
+          <option value="community">Get-to-know-your-community dates</option>
         </select>
 
         <!-- second dropdown for actual date ideas-->
-        <label for="dateidea">Date: </label>
-        <select class="form-select" id="outdoorIdea" name="varOptGroup">
+        <label for="ideas">Date: </label>
+        <select class='form-select' id="ideas">
           <option disabled selected>Which idea will you pick...?</option>
           <option id="idea1">Go on a hike</option>
           <option id="idea2">Go on a run</option>

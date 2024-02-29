@@ -16,16 +16,12 @@ img {
     border: 5px solid #0e91c5;
 }
 
-.form-select {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 label {
-  margin: 5px;
+  margin: 15px;
 }
 
 .btn-success {
+  margin-top: 15px;
   margin-bottom: 15px;
   background-color: green;
 }
