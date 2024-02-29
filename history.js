@@ -15,16 +15,16 @@ function loadHist() {
     const tableBodyEl = document.querySelector('#history');
   
     if (hist.length) {
-      for (const [i, hist] of hist.entries()) {
+      for (const [i, history] of hist.entries()) {
         const positionTdEl = document.createElement('td');
         const nameTdEl = document.createElement('td');
         const activityTdEl = document.createElement('td');
         const dateTdEl = document.createElement('td');
   
         positionTdEl.textContent = i + 1;
-        nameTdEl.textContent = hist.name;
-        activityTdEl.textContent = hist.activity;
-        dateTdEl.textContent = hist.date;
+        nameTdEl.textContent = history.name;
+        activityTdEl.textContent = history.activity;
+        dateTdEl.textContent = history.date;
   
         const rowEl = document.createElement('tr');
         rowEl.appendChild(positionTdEl);

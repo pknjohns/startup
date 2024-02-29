@@ -171,6 +171,7 @@ function reset(selectEl) {
 }
 
 function saveHist() {
+    //Get data to put into history table
     const userName = this.getPlayerName()
     const date = new Date().toLocaleDateString();
 
@@ -180,14 +181,15 @@ function saveHist() {
 
     const newActivity = { name: userName, activity: activity, date: date};
 
+    //Create JSON to send to history table
     let history = [];
 
-    const historyText = localStorage.getItem('history');
+    const historyText = localStorage.getItem('hist');
     if (historyText) {
         history = JSON.parse(historyText);
     }
 
-    history.push(newActivity);
+    history.unshift(newActivity);
 
     localStorage.setItem('hist', JSON.stringify(history))
     reset(document.getElementById('ideas'))
