@@ -39,4 +39,37 @@ function loadHist() {
     }
   }
   
+loadHist();
+
+// Simulate data that will come over WebSocket
+function removeAllRows(tableId) {
+  const tableBodyEl = document.querySelector(tableId);
+
+  // Iterate over all rows starting from the last one
+  for (var i = tableBodyEl.rows.length - 1; i >= 1; i--) {
+      tableBodyEl.deleteRow(i);
+  }
+}
+
+
+setInterval(() => {
+  const activity = 'get ice cream';
+  const userName = 'Patrick';
+  const date = new Date().toLocaleDateString();
+  const newActivity = { name: userName, activity: activity, date: date};
+
+  let history = [];
+
+  const historyText = localStorage.getItem('hist');
+  if (historyText) {
+      history = JSON.parse(historyText);
+  }
+
+  history.unshift(newActivity);
+
+  localStorage.setItem('hist', JSON.stringify(history))
+
+  removeAllRows('history')
+
   loadHist();
+}, 5000);
