@@ -1,5 +1,5 @@
 main {
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 15px;
     padding-bottom: 5px;
   }
@@ -14,4 +14,17 @@ img {
     height: auto;
     border-radius: 25px;
     border: 5px solid #0e91c5;
+}
+
+.form-select {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  margin: 5px;
+}
+
+#commit {
+  margin-bottom: 15px;
 }
