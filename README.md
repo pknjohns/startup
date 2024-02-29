@@ -73,15 +73,14 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
 
-[x] -  - Prerequisite: Notes in your startup Git repository README.md file
+[x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
-[x] -  - Prerequisite: At least 10 git commits spread consistently throughout the assignment period
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 20% JavaScript support for future login.
+[x] - done - 20% JavaScript support for future login. Users can login with a unique username, commit to a date, and their information will dynamically be added to the table in the local dating history page.
 
-[x] -  - 20% JavaScript support for future database data.
+[x] - done - 20% JavaScript support for future database data. This is shown in how the databse saves the user's username and the last date they committed to at what date.
 
-[x] -  - 20% JavaScript support for future WebSocket.
+[x] -  - 20% JavaScript support for future WebSocket. This is shows in how the application dynamically saves a user's committed date and displays it in the table in the local dating history page.
 
-[x] -  - 40% JavaScript support for your application's interaction logic.
-
+[x] - done - 40% JavaScript support for your application's interaction logic. All buttons function as desired.
