@@ -1,6 +1,10 @@
 const header = document.getElementById("playerHeader");
 header.textContent = "User: " + getPlayerName();
 
+function getPlayerName() {
+  return localStorage.getItem('userName') ?? 'Mystery user';
+}
+
 function loadHist() {
     let hist = [];
     const histText = localStorage.getItem('hist');
