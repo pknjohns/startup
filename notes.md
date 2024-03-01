@@ -77,6 +77,7 @@
 - ping - Check if a website is up
 - tracert - Trace the connections to a website
 - dig - Show the DNS information for a domain
+- whois - get info about a domain name frmo the domain name registry
 - man - Look up a command in the manual
 - printf - print string to the console
 - CTRL-R - Use type ahead to find previous commands
@@ -327,3 +328,63 @@ You can also chain the input and output of commands using special characters
 - async/await puts all the code after it in a `.then` box
     - async functions have to return a promise
 - can only await on an async func
+
+# Web Services
+
+<img src = https://github.com/pknjohns/startup/assets/137959114/89ea0b78-efb5-4732-adb6-4bea1b2cc351>
+
+- There are several different flavors of DNS database records that facilitate the mapping of domain names to IP addresses:
+    - address (`A`): straight mapping from domain name to IP address
+    - canonical name (`CNAME`): maps one domain name to another domain name, like a domain name alias
+
+ ### URL
+- Uniform Resource Locator (URL): location of a web resource, which can be anything
+- only parts of URL that are required are the scheme and domain name
+- Syntax: `<scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>`
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/55380ef3-58a9-459f-a700-984d98f0632f>
+
+- Uniform Resource Name (URN) - nuique resource name that doesn't specify location info
+- Unifirm Resource Identifier (URI) - general resrouce identifier that could refer to either a URL or a URN
+
+### Ports
+<img src=https://github.com/pknjohns/startup/assets/137959114/e833a786-e19b-4d05-8215-d752a3be70d9>
+- each web serivce needs to have its on port to communicate on
+
+### HTTP
+- When a web browser makes a request to a web server it does it using the HTTP protocol.
+- When a web client (e.g. a web browser) and a web server talk they exchange HTTP requests and responses. The browser will make an HTTP request and the server will generate an HTTP response. You can see the HTTP exchange by using the browser's debugger or by using a console tool like `curl`.
+
+##### Request
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/bced0ddb-7627-477a-bd1a-e4be3d6dc2ca>
+
+##### Response
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/2eb079f2-579d-4231-864d-09e04e62f923>
+
+##### Verbs
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/ef04feff-20b9-4345-87a7-99915eee1402>
+
+##### Status codes
+- 1xx - Informational.
+- 2xx - Success.
+- 3xx - Redirect to some other location, or that the previously cached resource is still valid.
+- 4xx - Client errors. The request is invalid.
+- 5xx - Server errors. The request cannot be satisfied due to an error on the server
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/694bb45f-dfd0-43b6-a189-8054a0b98f3c>
+
+##### Headers
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/eadd2deb-d96d-4f2f-ba92-6e449a97d1fe>
+
+##### Body
+- The format of the body of an HTTP request or response is defined by the `Content-Type` header. For example, it may be HTML text (text/html), a binary image format (image/png), JSON (application/json), or JavaScript (text/javascript). A client may specify what formats it accepts using the `accept` header.
+
+##### Cookies
+- allows servers to remember things
+
+##### Fetch
+- The basic usage of fetch takes a URL and returns a promise. The promise then function takes a callback function that is asynchronously called when the requested URL content is obtained. If the returned content is of type application/json you can use the json function on the response object to convert it to a JavaScript object.
