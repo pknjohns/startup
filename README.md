@@ -81,6 +81,6 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - 20% JavaScript support for future database data. This is shown in how the databse saves the user's username and the last date they committed to at what date.
 
-[x] -  - 20% JavaScript support for future WebSocket. This is shows in how the application dynamically saves a user's committed date and displays it in the table in the local dating history page.
+[x] - done - 20% JavaScript support for future WebSocket. This is shows in how the application dynamically saves a user's committed date and displays it in the table in the local dating history page.
 
 [x] - done - 40% JavaScript support for your application's interaction logic. All buttons function as desired.
