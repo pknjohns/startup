@@ -388,3 +388,16 @@ You can also chain the input and output of commands using special characters
 
 ##### Fetch
 - The basic usage of fetch takes a URL and returns a promise. The promise then function takes a callback function that is asynchronously called when the requested URL content is obtained. If the returned content is of type application/json you can use the json function on the response object to convert it to a JavaScript object.
+
+##### Node.js
+- Can use Node (Node.js) to run Javascript from basically anywhere outside of a browser (like in the console)
+- use `node -v` to see currrent version of Node isntalled on computer
+- use `node -e [javascript code]` to execute javascript code in terminal
+- use `node [javascript file]` to execute javascript file in terminal
+- use `node` to open an interpretive mode in terminal
+
+- can install preexisting Javascript packages frmo NPM (Node Pacakge Manager, installed when Node.js was installed) for implementing common tasks
+    - to do this, initialze code to use NPM by running `npm init` in your project directory
+    - then use `npm install [package name]` to install the package in yor directory (look up packages on NPM website)
+    - to uninstall a package use `npm uninstall [package name]`
+- should include the `node_modules` directory in `.gitignore` since it is very large and would take forever to open
