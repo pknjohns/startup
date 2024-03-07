@@ -400,4 +400,20 @@ You can also chain the input and output of commands using special characters
     - to do this, initialze code to use NPM by running `npm init` in your project directory
     - then use `npm install [package name]` to install the package in yor directory (look up packages on NPM website)
     - to uninstall a package use `npm uninstall [package name]`
-- should include the `node_modules` directory in `.gitignore` since it is very large and would take forever to open
+- when you install package dependencies, NPM creates a `package-lock.json` file and a `node_modules` directory, both in your project directory
+    -    The `package-lock.json` file tracks the version of the package that you installed.
+    - should include the `node_modules` directory in `.gitignore` since it is very large and would take forever to open
+    - When you clone your source code from GitHub to a new location, the first thing you should do is run `npm install` in the project directory. This will cause NPM to download all of the previously installed packages and recreate the `node_modules` directory
+- Main steps:
+    - Create your project directory
+    - Initialize it for use with NPM by running `npm init -y`
+    - Make sure `.gitignore` file contains `node_modules`
+    - Install any desired packages with `npm install <package name here>`
+    - Add `require('<package name here>')` to your application's JavaScript
+    - Use the code the package provides in your JavaScript
+    - Run your code with `node index.js`
+ 
+##### Express
+- install using `npm install express`
+- Create Express aplication by calling the express constructor to create the Express application and listen fro HTTP requests on a desired port
+- The order you add your middleware to Express is the order that they will be called in.
