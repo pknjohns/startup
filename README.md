@@ -84,3 +84,23 @@ Have you and your special someone ever wanted to go on a date but not known what
 [x] - done - 20% JavaScript support for future WebSocket. This is shows in how the application dynamically saves a user's committed date and displays it in the table in the local dating history page.
 
 [x] - done - 40% JavaScript support for your application's interaction logic. All buttons function as desired.
+
+## Startup Service Deliverable
+
+[x] - done - Prerequisite: Simon Service deployed to your production environment
+
+[x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+
+[x] - done - Prerequisite: Notes in your startup Git repository README.md file
+
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
+
+[x] -  - 40% Create an HTTP service using Node.js and Express
+
+[x] -  - 10% Frontend served up using Express static middleware
+
+[x] -  - 10% Your frontend calls third party service endpoints
+
+[x] -  - 20% Your backend provides service endpoints
+
+[x] -  - 20% Your frontend calls your service endpoints
