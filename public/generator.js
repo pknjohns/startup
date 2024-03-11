@@ -189,6 +189,7 @@ function saveHist() {
         history = JSON.parse(historyText);
     }
 
+    // Add new data to the top of the table
     history.unshift(newActivity);
 
     localStorage.setItem('hist', JSON.stringify(history))
