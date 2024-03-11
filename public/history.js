@@ -12,6 +12,7 @@ function loadHist() {
       hist = JSON.parse(histText);
     }
   
+    // displayHist()
     const tableBodyEl = document.querySelector('#history');
   
     if (hist.length) {
