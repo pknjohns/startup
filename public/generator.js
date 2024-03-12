@@ -172,7 +172,7 @@ function reset(selectEl) {
     cat.selectedIndex = 0;
 }
 
-function saveHist() {
+async function saveHist() {
     //Get data to put into history table
     const userName = this.getPlayerName()
     const date = new Date().toLocaleDateString();
@@ -181,19 +181,19 @@ function saveHist() {
     idx = idea.selectedIndex;
     const activity = idea.options[idx].text
 
-    const newActivity = { name: userName, activity: activity, date: date};
+    const newDate = { name: userName, activity: activity, date: date};
 
     //Create JSON to send to history table
     let history = [];
 
-    const historyText = localStorage.getItem('hist');
+    const historyText = localStorage.getItem('histories');
     if (historyText) {
         history = JSON.parse(historyText);
     }
 
     // Add new data to the top of the table
-    history.unshift(newActivity);
+    history.unshift(newDate);
 
-    localStorage.setItem('hist', JSON.stringify(history))
+    localStorage.setItem('histories', JSON.stringify(history))
     reset(document.getElementById('ideas'))
 }
