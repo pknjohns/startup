@@ -83,6 +83,6 @@ setInterval(() => {
 
   localStorage.setItem('histories', JSON.stringify(histories))
 
-}, 5000);
+}, 2000);
 
 loadHist();
