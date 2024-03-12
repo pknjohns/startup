@@ -6,26 +6,27 @@ function getPlayerName() {
 }
 
 async function loadHist() {
-    let hist = [];
-    const histText = localStorage.getItem('hist');
+    let history = [];
+    const histText = localStorage.getItem('history');
     if (histText) {
-      hist = JSON.parse(histText);
+      history = JSON.parse(histText);
     }
+}
   
-    // displayHist()
+function displayHist() {
     const tableBodyEl = document.querySelector('#history');
   
-    if (hist.length) {
-      for (const [i, history] of hist.entries()) {
+    if (history.length) {
+      for (const [i, entry] of history.entries()) {
         const positionTdEl = document.createElement('td');
         const nameTdEl = document.createElement('td');
         const activityTdEl = document.createElement('td');
         const dateTdEl = document.createElement('td');
   
         positionTdEl.textContent = i + 1;
-        nameTdEl.textContent = history.name;
-        activityTdEl.textContent = history.activity;
-        dateTdEl.textContent = history.date;
+        nameTdEl.textContent = entry.name;
+        activityTdEl.textContent = entry.activity;
+        dateTdEl.textContent = entry.date;
   
         const rowEl = document.createElement('tr');
         rowEl.appendChild(positionTdEl);
