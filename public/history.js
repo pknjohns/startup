@@ -65,7 +65,7 @@ function removeAllRows(tableId) {
   }
 }
 
-/*
+
 setInterval(() => {
   const activity = 'get ice cream';
   const userName = 'Patrick';
@@ -83,6 +83,8 @@ setInterval(() => {
 
   localStorage.setItem('histories', JSON.stringify(histories))
 
-}, 2000);
-*/
+  loadHist();
+
+}, 7000);
+
 loadHist();
