@@ -7,10 +7,23 @@ function getPlayerName() {
 
 async function loadHist() {
     let history = [];
-    const histText = localStorage.getItem('history');
-    if (histText) {
-      history = JSON.parse(histText);
+
+    try {
+      // Get most recent dating history from service
+      const response = await fetch('api/histories');
+      histories = await response.json();
+
+      // Save local dating history in case we go offline in the future
+      localStorage.setItem('histories', JSON.stringify(histories));
+    } catch {
+      const histText = localStorage.getItem('history');
+      if (histText) {
+        history = JSON.parse(histText);
+      }
     }
+
+    // Display latest dating history from service in table
+    displayHist();
 }
   
 function displayHist() {
