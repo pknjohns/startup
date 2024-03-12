@@ -38,10 +38,11 @@ app.listen(port, () => {
 // The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
 let histories = [];
 function updateTable(newDate, histories) {
+  histories.unshift(newDate);
+  
   if (histories.length > 20) {
-    histories.unshift(newDate);
     histories.length = 20;
   }
-
+  
   return histories;
 }
