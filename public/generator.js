@@ -2,6 +2,8 @@ const header = document.getElementById("playerHeader");
 header.textContent = "User: " + getPlayerName();
 
 function getIdeas(selectObj) {
+    // Gets a date idea function based on category
+    // used to fill date idea dropdown on generator page
     const idx = selectObj.selectedIndex;
     const value = selectObj.options[idx].value;
     
@@ -22,7 +24,7 @@ function clear(selectEl) {
 
 function getOutdoor() {
 
-    // Get ideas dropdown
+    // Get outdoor date ideas for dropdown
     const selectEl = document.getElementById('ideas');
 
     const def = document.createElement('option');
@@ -66,7 +68,7 @@ function getOutdoor() {
 
 function getNoPrep() {
 
-    // Get ideas dropdown
+    // Get no prep date ideas for dropdown
     const selectEl = document.getElementById('ideas');
 
     const def = document.createElement('option');
@@ -110,7 +112,7 @@ function getNoPrep() {
 
 function getCommunity() {
 
-    // Get ideas dropdown
+    // Get community involvement date ideas for dropdown
     const selectEl = document.getElementById('ideas');
 
     const def = document.createElement('option');
