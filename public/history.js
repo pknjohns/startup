@@ -5,7 +5,7 @@ function getPlayerName() {
   return localStorage.getItem('userName') ?? 'Mystery user';
 }
 
-function loadHist() {
+async function loadHist() {
     let hist = [];
     const histText = localStorage.getItem('hist');
     if (histText) {

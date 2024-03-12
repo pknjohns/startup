@@ -34,8 +34,8 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// updateScores considers a new score for inclusion in the high scores.
-// The high scores are saved in memory and disappear whenever the service is restarted.
+// updateTable includes a newly committed date in the table
+// The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
 let histories = [];
 function updateTable(newDate, histories) {
   if (histories.length > 20) {
