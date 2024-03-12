@@ -6,7 +6,7 @@ function getPlayerName() {
 }
 
 async function loadHist() {
-    let history = [];
+    let histories = [];
 
     try {
       // Get most recent dating history from service
@@ -16,21 +16,21 @@ async function loadHist() {
       // Save local dating history in case we go offline in the future
       localStorage.setItem('histories', JSON.stringify(histories));
     } catch {
-      const histText = localStorage.getItem('history');
+      const histText = localStorage.getItem('histories');
       if (histText) {
-        history = JSON.parse(histText);
+        histories = JSON.parse(histText);
       }
     }
 
     // Display latest dating history from service in table
-    displayHist();
+    displayHist(histories);
 }
   
-function displayHist() {
+function displayHist(histories) {
     const tableBodyEl = document.querySelector('#history');
   
-    if (history.length) {
-      for (const [i, entry] of history.entries()) {
+    if (histories.length) {
+      for (const [i, entry] of histories.entries()) {
         const positionTdEl = document.createElement('td');
         const nameTdEl = document.createElement('td');
         const activityTdEl = document.createElement('td');
