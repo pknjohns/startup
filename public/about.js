@@ -17,4 +17,4 @@ function displayQuote(data) {
       });
   }
 
-  displayQuote();
+displayQuote();
