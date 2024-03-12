@@ -183,17 +183,38 @@ async function saveHist() {
 
     const newDate = { name: userName, activity: activity, date: date};
 
-    //Create JSON to send to history table
-    let history = [];
+    try {
+        const response = await fetch('/api/date', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(newDate),
+        });
 
-    const historyText = localStorage.getItem('histories');
-    if (historyText) {
-        history = JSON.parse(historyText);
+        // Store what service gives us as local dating history
+        const history = await response.json();
+        localStorage.setItem('history', JSON.stringify(history));
+    } catch {
+        // If there was an error, track dating history locally
+
+        //Create JSON to send to history table
+        let histories = [];
+
+        const historyText = localStorage.getItem('histories');
+        if (historyText) {
+            histories = JSON.parse(historyText);
+        }
+
+        if (histories.length > 20) {
+            histories.unshift(newDate);
+            histories.length = 20;
+          }
+
+        // Add new data to the top of the table
+        histories.unshift(newDate);
+
+        localStorage.setItem('histories', JSON.stringify(histories))
     }
 
-    // Add new data to the top of the table
-    history.unshift(newDate);
-
-    localStorage.setItem('histories', JSON.stringify(history))
+    // Reset generator dropdowns after a date idea has been committed to
     reset(document.getElementById('ideas'))
 }
