@@ -183,6 +183,7 @@ async function saveHist() {
 
     const newDate = { name: userName, activity: activity, date: date};
 
+    // Use service to set newDate that has been comitted to
     try {
         const response = await fetch('/api/date', {
             method: 'POST',
