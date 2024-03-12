@@ -1,6 +1,7 @@
 const header = document.getElementById("playerHeader");
 header.textContent = "User: " + getPlayerName();
 
+// Used to display user's username at top of page
 function getPlayerName() {
   return localStorage.getItem('userName') ?? 'Mystery user';
 }
@@ -53,8 +54,6 @@ function displayHist(histories) {
       tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to get inspired for your next date!</td></tr>';
     }
   }
-  
-loadHist();
 
 // Simulate data that will come over WebSocket
 function removeAllRows(tableId) {
@@ -71,20 +70,19 @@ setInterval(() => {
   const activity = 'get ice cream';
   const userName = 'Patrick';
   const date = new Date().toLocaleDateString();
-  const newActivity = { name: userName, activity: activity, date: date};
+  const newDate = { name: userName, activity: activity, date: date};
 
-  let history = [];
+  let histories = [];
 
-  const historyText = localStorage.getItem('hist');
+  const historyText = localStorage.getItem('histories');
   if (historyText) {
-      history = JSON.parse(historyText);
+      histories = JSON.parse(historyText);
   }
 
-  history.unshift(newActivity);
+  histories.unshift(newDate);
 
-  localStorage.setItem('hist', JSON.stringify(history))
+  localStorage.setItem('histories', JSON.stringify(histories))
 
-  removeAllRows('history')
-
-  loadHist();
 }, 5000);
+
+loadHist();
