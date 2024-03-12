@@ -95,12 +95,12 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 40% Create an HTTP service using Node.js and Express
+[x] - done - 40% Create an HTTP service using Node.js and Express
 
-[x] -  - 10% Frontend served up using Express static middleware
+[x] - done - 10% Frontend served up using Express static middleware
 
 [x] -  - 10% Your frontend calls third party service endpoints
 
-[x] -  - 20% Your backend provides service endpoints
+[x] - done - 20% Your backend provides service endpoints
 
-[x] -  - 20% Your frontend calls your service endpoints
+[x] - done - 20% Your frontend calls your service endpoints
