@@ -192,8 +192,8 @@ async function saveHist() {
         });
 
         // Store what service gives us as local dating history
-        const history = await response.json();
-        localStorage.setItem('history', JSON.stringify(history));
+        const histories = await response.json();
+        localStorage.setItem('histories', JSON.stringify(histories));
     } catch {
         // If there was an error, track dating history locally
 
