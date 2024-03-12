@@ -417,3 +417,5 @@ You can also chain the input and output of commands using special characters
 - install using `npm install express`
 - Create Express aplication by calling the express constructor to create the Express application and listen fro HTTP requests on a desired port
 - The order you add your middleware to Express is the order that they will be called in.
+
+- to debug Node/ Express with VS code, you have to put the breakpoints in the index.js file; you can't put them anywhere else in your other files
