@@ -419,3 +419,39 @@ You can also chain the input and output of commands using special characters
 - The order you add your middleware to Express is the order that they will be called in.
 
 - to debug Node/ Express with VS code, you have to put the breakpoints in the index.js file; you can't put them anywhere else in your other files
+
+### SOP and CORS
+- SOP = Same Origin Policy
+    - only allows JavaScript to make requrests to a domain if it is the same domain that the user is currently viewing
+    - creates issues with services that any web application can use, which led to Cross Origin Resource Sharing (CORS)
+- CORS
+    - allows client to specifiy origin of request and let the server respond with what origins are allowed
+    - for our service, need to test all 3rd party services to make sure they return an `Acces-Control-Allow-Origin` header with the value of `*` (meaning any origin can make requrests to the service)
+
+### Service Design
+- leverage HTTP to access services that already implement the functionality you need rather than implementing it yourself
+- service endpoints = Application Programming Interface (API)
+
+##### RPC
+- Remote Procedure Calls (RPC)
+- expose service endpoitns as simple function calls
+- leverages POST HTTP verb
+- Advantage: maps directly to function calls that might exist within the server
+- Disadvantage: directly exposes inner workings of the service, creating a coupling between endpoints & implementation
+
+##### REST
+- Representational State Transfer
+- always acts upon a resource
+- operations on resource impact the state of the reseource as it is transferred by a REST endpoint call
+- allows for caching functionality of HTTP to work optimally
+- can use to maximize HTTP
+    - makes it easy for HTTP infrastructure (liek caching) to work properly
+
+##### GraphQL
+- focuses on manipulation of data instead of a function call (RPC) or a resource (REST)
+- query that specifies the desired data and how it should be joined/ filtered
+- removes a lot of the logic for parsing endpoints and mapping requests to specific resources -> there is only one endpoint; the query endpoint
+- Disadvantage: client now has significant power to consume resources on the server
+    - no clear boundary on what, how much, or how complicated the aggregation of data is
+    - difficult for server to implement authorization rights to data bc have to be baked into data schema
+- there are standards for how to define a complex schema through common GraphQL packages

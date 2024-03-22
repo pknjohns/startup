@@ -99,7 +99,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - 10% Frontend served up using Express static middleware
 
-[x] -  - 10% Your frontend calls third party service endpoints
+[x] - done - 10% Your frontend calls third party service endpoints
 
 [x] - done - 20% Your backend provides service endpoints
 
