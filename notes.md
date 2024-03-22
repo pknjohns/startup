@@ -455,3 +455,54 @@ You can also chain the input and output of commands using special characters
     - no clear boundary on what, how much, or how complicated the aggregation of data is
     - difficult for server to implement authorization rights to data bc have to be baked into data schema
 - there are standards for how to define a complex schema through common GraphQL packages
+
+### Uploading files
+- You should take serious thought about where you store your files. Putting files on your server is not a very good production level solution for the following reasons.
+
+1. You only have so much available space. Your server only has 8 GB by default. Once you use up all your space then your server will fail to operate correctly and you may need to rebuild your server.
+2. In a production system, servers are transient and are often replaced as new versions are released, or capacity requirements change. That means you will lose any state that you store on your server.
+3. The server storage is not usually backed up. If the server fails for any reason, you will lose your customer's data. YOU MUST ALWAYS ASSUME YOUR SERVER WILL DISAPPEAR
+4. If you have multiple application servers then you can't assume that the server you uploaded the data to is going to be the one you request a download from.
+
+- Instead you want to use a dedicated storage service that has durability guarantees, is not tied to your compute capacity, and can be accessed by multiple application servers.
+
+### Storage Services
+- There are many such solutions out there, but one of the most popular ones is AWS S3. S3 provides the following advantages:
+
+1. It has unlimited capacity
+2. You only pay for the storage that you use
+3. It is optimized for global access
+4. It keeps multiple redundant copies of every file
+5. You can version the files
+6. It is performant
+7. It supports metadata tags
+8. You can make your files publicly available directly from S3
+9. You can keep your files private and only accessible to your application
+
+### Data Services
+- use MongoDB: increases developer productivity by using JSON objects as core data model
+    - a database made up of one or more collections, each containing JSON documents
+    - collection = large array of JSON objects, each w/ a unique ID
+    - has no strict shcema requirements: each document in collection usually follows a similar schema, but each doc can have specialized fields and/or be missing common fields
+    - install using `npm install mongodb`
+    - use `MongoClient` object to make a client connection to the database server:
+
+```
+const { MongoClient } = require('mongodb');
+
+const userName = 'holowaychuk';
+const password = 'express';
+const hostname = 'mongodb.com';
+
+const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+
+const client = new MongoClient(url);
+```
+
+- w/ the client connection, you get a database object, and from that a collection object
+    - you can insert and query for docs from the collection object
+    - if collection (or database) doesn't exist when you insert a doc, Mongo will create them for you
+- use `find` on the collection object to query for docs
+    - is an async func so use `await` keyword when executing func on `collection.find()` result
+        - `collection.find()` will return all docs in the collection
+- 
