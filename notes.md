@@ -505,4 +505,11 @@ const client = new MongoClient(url);
 - use `find` on the collection object to query for docs
     - is an async func so use `await` keyword when executing func on `collection.find()` result
         - `collection.find()` will return all docs in the collection
-- 
+
+### Account creation & login
+- need a way for users to uniquely identify themselves
+    -  usually reqyures 2 service endpoints: one to create an authentication credential, and a second to authenticate, or login, on future visits
+    -  when setting a an authorization token (cookie), use the following attributes:
+        -  `httpOnly`: tells browser to not allow JS running on the browser to read the cookie
+        -  `secure`: requires the HTTPS to be used when sending the cookie back to the server
+        -  `sameSite`: will only return the cookie to the domain that generated it
