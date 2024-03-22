@@ -90,10 +90,15 @@ apiRouter.get('/histories', (_req, res) => {
   res.send(histories);
 });
 
-// SubmitDate: date = date user has jsut committed to
+// SubmitDate: date = date user has just committed to
 apiRouter.post('/date', (req, res) => {
   histories = updateTable(req.body, histories);
   res.send(histories);
+});
+
+// Default error handler
+app.use(function (err, req, res, next) {
+  res.status(500).send({ type: err.name, message: err.message });
 });
 
 // Return the application's default page if the path is unknown
