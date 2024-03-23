@@ -93,8 +93,8 @@ secureApiRouter.get('/histories', async (_req, res) => {
 
 // SubmitDate: date = date user has just committed to
 secureApiRouter.post('/date', async (req, res) => {
-  const activity = {...req.body, ip: req.ip };
-  await DB.addActivity(activity);
+  const newDate = {...req.body, ip: req.ip };
+  await DB.addDate(newDate);
   const histories = await DB.getHistory();
   res.send(histories);
 });

@@ -40,11 +40,16 @@ async function createUser(email, password) {
     return user;
 }
 
-function addActivity(activity) {
-    historiesCollection.insertOne(activity);
+function addDate(date) {
+    historiesCollection.insertOne(date);
 }
 
 function getHistory() {
+    const options = {
+        sort: { date: -1 },
+        limit: 20
+    }
+
     // updateTable includes a newly committed date in the table
     // The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
     let histories = [];
@@ -63,6 +68,6 @@ module.exports = {
     getUser,
     getUserByToken,
     createUser,
-    addActivity,
+    addDate,
     getHistory,
   };
