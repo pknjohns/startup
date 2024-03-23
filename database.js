@@ -45,10 +45,7 @@ function addDate(date) {
 }
 
 function getHistory() {
-    const options = {
-        limit: 20,
-    };
-    const cursor = historiesCollection.find(options);
+    const cursor = historiesCollection.find();
     return cursor.toArray();
 }
 
