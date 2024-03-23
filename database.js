@@ -46,27 +46,10 @@ function addDate(date) {
 
 function getHistory() {
     const options = {
-        sort: { date: -1 },
-        limit: 20
-    }
-
+        limit: 20,
+    };
     const cursor = historiesCollection.find(options);
     return cursor.toArray();
-
-    /* old getHistory func from index.js
-    // updateTable includes a newly committed date in the table
-    // The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
-    let histories = [];
-    function updateTable(newDate, histories) {
-    histories.unshift(newDate);
-    
-    if (histories.length > 20) {
-        histories.length = 20;
-    }
-    
-    return histories;
-    }
-    */
 }
 
 module.exports = {
