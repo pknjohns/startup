@@ -50,6 +50,10 @@ function getHistory() {
         limit: 20
     }
 
+    const cursor = historiesCollection.find(options);
+    return cursor.toArray();
+
+    /* old getHistory func from index.js
     // updateTable includes a newly committed date in the table
     // The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
     let histories = [];
@@ -62,6 +66,7 @@ function getHistory() {
     
     return histories;
     }
+    */
 }
 
 module.exports = {
