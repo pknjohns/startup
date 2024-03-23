@@ -99,19 +99,6 @@ secureApiRouter.post('/date', async (req, res) => {
   res.send(histories);
 });
 
-// updateTable includes a newly committed date in the table
-// The 20 most recent dates are saved in memory and disappear whenever the service is restarted.
-let histories = [];
-function updateTable(newDate, histories) {
-  histories.unshift(newDate);
-  
-  if (histories.length > 20) {
-    histories.length = 20;
-  }
-  
-  return histories;
-}
-
 // Default error handler
 app.use(function (err, req, res, next) {
   res.status(500).send({ type: err.name, message: err.message });
