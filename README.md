@@ -113,14 +113,14 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
-[x] -  - Prerequisite: At least 10 git commits made throughout the assignment period
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 20% Supports new user registration
+[x] - done - 20% Supports new user registration
 
-[x] -  - 20% Supports existing user authentication
+[x] - done - 20% Supports existing user authentication
 
-[x] -  - 20% Stores application data in MongoDB
+[x] - done - 20% Stores application data in MongoDB
 
-[x] -  - 20% Stores and retrieves credentials in MongoDB
+[x] - done - 20% Stores and retrieves credentials in MongoDB
 
-[x] -  - 20% Restricts application functionality based upon authentication
+[x] - done - 20% Restricts application functionality based upon authentication
