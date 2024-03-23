@@ -86,24 +86,14 @@ secureApiRouter.use(async (req, res, next) => {
 });
 
 // GetHistories: histories are all entries in history table
-apiRouter.get('/histories', (_req, res) => {
+secureApiRouter.get('/histories', async (_req, res) => {
   res.send(histories);
 });
 
 // SubmitDate: date = date user has just committed to
-apiRouter.post('/date', (req, res) => {
+secureApiRouter.post('/date', async (req, res) => {
   histories = updateTable(req.body, histories);
   res.send(histories);
-});
-
-// Default error handler
-app.use(function (err, req, res, next) {
-  res.status(500).send({ type: err.name, message: err.message });
-});
-
-// Return the application's default page if the path is unknown
-app.use((_req, res) => {
-  res.sendFile('index.html', { root: 'public' });
 });
 
 // updateTable includes a newly committed date in the table
@@ -118,6 +108,16 @@ function updateTable(newDate, histories) {
   
   return histories;
 }
+
+// Default error handler
+app.use(function (err, req, res, next) {
+  res.status(500).send({ type: err.name, message: err.message });
+});
+
+// Return the application's default page if the path is unknown
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
 
 // setAuthCookie in the HTTP response
 function setAuthCookie(res, authToken) {
