@@ -41,7 +41,7 @@ async function createUser(email, password) {
 }
 
 function addActivity(activity) {
-
+    historiesCollection.insertOne(activity);
 }
 
 function getHistory() {
