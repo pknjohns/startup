@@ -87,6 +87,7 @@ secureApiRouter.use(async (req, res, next) => {
 
 // GetHistories: histories are all entries in history table
 secureApiRouter.get('/histories', async (_req, res) => {
+  const histories = await DB.getHistory();
   res.send(histories);
 });
 
