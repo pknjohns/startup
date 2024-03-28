@@ -31,7 +31,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 ### Rough sketch
 
-![Picture of draft startup display](pictures/spec_draft.png)
+![Picture of draft startup display](public/assets/spec_draft.png)
 
 ## HTML Deliverable:
 - Prerequisites: I deployed the Simon HTML to my production environment, placed a link to my GitHub startup repository on my application's homepage, have filled out my README.md, and have made over 10 git commits spread consistently throughout the assignment period.
