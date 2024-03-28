@@ -1,3 +1,5 @@
+configureWebSocket();
+
 const header = document.getElementById("playerHeader");
 header.textContent = "User: " + getPlayerName();
 
@@ -194,6 +196,7 @@ async function saveHist() {
         // Store what service gives us as local dating history
         const histories = await response.json();
         localStorage.setItem('histories', JSON.stringify(histories));
+        broadcastEvent(newDate);
     } catch {
         // If there was an error, track dating history locally
 
@@ -233,12 +236,8 @@ function configureWebSocket() {
     };
     this.socket.onmessage = async (event) => {
         const msg = JSON.parse(await event.data.text());
-        if (msg.type === GameEndEvent) {
-        this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
-        } else if (msg.type === GameStartEvent) {
-        this.displayMsg('player', msg.from, `started a new game`);
-        }
-    };
+        this.displayMsg(msg.from, `just committed to ${msg.activity}!`);
+    }
 }
 
 function displayMsg(cls, from, msg) {
@@ -247,11 +246,10 @@ function displayMsg(cls, from, msg) {
       `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
 }
 
-function broadcastEvent(from, type, value) {
+function broadcastEvent(value) {
     const event = {
-      from: from,
-      type: type,
-      value: value,
+      from: value.name,
+      activity: value.activity,
     };
     this.socket.send(JSON.stringify(event));
 }
