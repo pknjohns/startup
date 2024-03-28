@@ -65,7 +65,7 @@ function removeAllRows(tableId) {
   }
 }
 
-
+/*
 setInterval(() => {
   const activity = 'get ice cream';
   const userName = 'Patrick';
@@ -86,5 +86,6 @@ setInterval(() => {
   loadHist();
 
 }, 7000);
+*/
 
 loadHist();
