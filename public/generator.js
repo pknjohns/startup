@@ -236,12 +236,12 @@ function configureWebSocket() {
     };
     this.socket.onmessage = async (event) => {
         const msg = JSON.parse(await event.data.text());
-        this.displayMsg(msg.from, `just committed to ${msg.activity}!`);
+        this.displayMsg('user', msg.from, `just committed to ${msg.activity}!`);
     }
 }
 
 function displayMsg(cls, from, msg) {
-    const chatText = document.querySelector('#player-messages');
+    const chatText = document.querySelector('#messages');
     chatText.innerHTML =
       `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
 }
