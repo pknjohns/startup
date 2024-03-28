@@ -124,3 +124,21 @@ Have you and your special someone ever wanted to go on a date but not known what
 [x] - done - 20% Stores and retrieves credentials in MongoDB
 
 [x] - done - 20% Restricts application functionality based upon authentication
+
+## Startup WebSocket Deliverable
+
+[x] - done - Prerequisite: Simon Service deployed to your production environment
+
+[x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+
+[x] - done - Prerequisite: Notes in your startup Git repository README.md file
+
+[x] -  - Prerequisite: At least 10 git commits made throughout the assignment period
+
+[x] -  - 20% Backend listens for WebSocket connection
+
+[x] -  - 20% Frontend makes WebSocket connection
+
+[x] -  - 30% Data sent over WebSocket connection
+
+[x] -  - 30% WebSocket data displayed in the application interface
