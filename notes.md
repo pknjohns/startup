@@ -529,3 +529,6 @@ const client = new MongoClient(url);
 - use Playwright to automate the browser for testing applications
 - to test application on different devices, use BrowserStack
 - fro endpoint testing, use Jest
+
+# WebSocket
+- enables connections between 2 parties/devices
