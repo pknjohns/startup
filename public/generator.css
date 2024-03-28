@@ -26,6 +26,12 @@ label {
   background-color: green;
 }
 
+.udpates {
+  flex: 1;
+  width: 100%;
+  padding: 0.5em;
+}
+
 #messages {
   padding-top: 0.25em;
   opacity: 0.7;
