@@ -24,7 +24,7 @@ Have you and your special someone ever wanted to go on a date but not known what
 - JavaScript: Enable ability to press buttons and access different parts of the application.
 - Web service: Save the last date a user committed to
 - Athentication: Enable ability for users to create an account and log in to the application
-- Database persistence: Store login information as well as the last date user committed to and the date they committed to it
+- Database persistence: Store login information as well as the last date user committed to and when they committed to it
 - Websocket: Display the last date you committed to and when in the local activity page so others can see the name of the date and when you committed to it
 - Web framework: Using React to add components and request routing
 
