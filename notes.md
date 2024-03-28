@@ -524,3 +524,8 @@ const client = new MongoClient(url);
 
 <img src=https://github.com/pknjohns/startup/assets/137959114/82522a61-b2f3-4419-ab12-38166f475fc9>
 
+### UI testing
+- TDD = test driven development
+- use Playwright to automate the browser for testing applications
+- to test application on different devices, use BrowserStack
+- fro endpoint testing, use Jest
