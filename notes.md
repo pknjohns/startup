@@ -508,8 +508,27 @@ const client = new MongoClient(url);
 
 ### Account creation & login
 - need a way for users to uniquely identify themselves
-    -  usually reqyures 2 service endpoints: one to create an authentication credential, and a second to authenticate, or login, on future visits
+    -  usually requires 2 service endpoints: one to create an authentication credential, and a second to authenticate, or login, on future visits
     -  when setting a an authorization token (cookie), use the following attributes:
         -  `httpOnly`: tells browser to not allow JS running on the browser to read the cookie
         -  `secure`: requires the HTTPS to be used when sending the cookie back to the server
         -  `sameSite`: will only return the cookie to the domain that generated it
+
+### Service Daemons - PM2
+- allows program to keep running even after a shutdown
+- PM2 = Process Manager 2: what helps our web service continue running as a daemon and start and stop our services easily
+    -  how to see PM2 in action:
+        -  SSH into server
+        -  run: `pm2 ls` -> shows the stwo services that are configured to run on web browser (simon and startup)
+    - more useful commands:
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/82522a61-b2f3-4419-ab12-38166f475fc9>
+
+### UI testing
+- TDD = test driven development
+- use Playwright to automate the browser for testing applications
+- to test application on different devices, use BrowserStack
+- fro endpoint testing, use Jest
+
+# WebSocket
+- enables connections between 2 parties/devices

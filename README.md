@@ -24,14 +24,14 @@ Have you and your special someone ever wanted to go on a date but not known what
 - JavaScript: Enable ability to press buttons and access different parts of the application.
 - Web service: Save the last date a user committed to
 - Athentication: Enable ability for users to create an account and log in to the application
-- Database persistence: Store login information as well as the last date user committed to and the date they committed to it
+- Database persistence: Store login information as well as the last date user committed to and when they committed to it
 - Websocket: Display the last date you committed to and when in the local activity page so others can see the name of the date and when you committed to it
 - Web framework: Using React to add components and request routing
 
 
 ### Rough sketch
 
-![Picture of draft startup display](pictures/spec_draft.png)
+![Picture of draft startup display](public/assets/spec_draft.png)
 
 ## HTML Deliverable:
 - Prerequisites: I deployed the Simon HTML to my production environment, placed a link to my GitHub startup repository on my application's homepage, have filled out my README.md, and have made over 10 git commits spread consistently throughout the assignment period.
@@ -113,14 +113,32 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
+
+[x] - done - 20% Supports new user registration
+
+[x] - done - 20% Supports existing user authentication
+
+[x] - done - 20% Stores application data in MongoDB
+
+[x] - done - 20% Stores and retrieves credentials in MongoDB
+
+[x] - done - 20% Restricts application functionality based upon authentication
+
+## Startup WebSocket Deliverable
+
+[x] - done - Prerequisite: Simon Service deployed to your production environment
+
+[x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+
+[x] - done - Prerequisite: Notes in your startup Git repository README.md file
+
 [x] -  - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 20% Supports new user registration
+[x] -  - 20% Backend listens for WebSocket connection
 
-[x] -  - 20% Supports existing user authentication
+[x] -  - 20% Frontend makes WebSocket connection
 
-[x] -  - 20% Stores application data in MongoDB
+[x] -  - 30% Data sent over WebSocket connection
 
-[x] -  - 20% Stores and retrieves credentials in MongoDB
-
-[x] -  - 20% Restricts application functionality based upon authentication
+[x] -  - 30% WebSocket data displayed in the application interface
