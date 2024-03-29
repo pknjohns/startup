@@ -133,12 +133,12 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
-[x] -  - Prerequisite: At least 10 git commits made throughout the assignment period
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 20% Backend listens for WebSocket connection
+[x] - done - 20% Backend listens for WebSocket connection
 
-[x] -  - 20% Frontend makes WebSocket connection
+[x] - done - 20% Frontend makes WebSocket connection
 
-[x] -  - 30% Data sent over WebSocket connection
+[x] - done - 30% Data sent over WebSocket connection
 
-[x] -  - 30% WebSocket data displayed in the application interface
+[x] - done - 30% WebSocket data displayed in the application interface
