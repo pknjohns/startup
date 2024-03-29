@@ -65,27 +65,4 @@ function removeAllRows(tableId) {
   }
 }
 
-/*
-setInterval(() => {
-  const activity = 'get ice cream';
-  const userName = 'Patrick';
-  const date = new Date().toLocaleDateString();
-  const newDate = { name: userName, activity: activity, date: date};
-
-  let histories = [];
-
-  const historyText = localStorage.getItem('histories');
-  if (historyText) {
-      histories = JSON.parse(historyText);
-  }
-
-  histories.unshift(newDate);
-
-  localStorage.setItem('histories', JSON.stringify(histories))
-
-  loadHist();
-
-}, 7000);
-*/
-
 loadHist();
