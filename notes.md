@@ -614,3 +614,24 @@ Types of practice security web applications:
 - Components can have properties and internal state
 - add state using `React.useState` hook function. It returns a variable containnig the current state and a function to update the state
 - Reactivity controls how a component reacts to actions taken by the user or events that happen within the application. Whenever a component's state or properties change, the render function for the component and all of its dependent component render functions are called.
+
+### Toolchains
+- As web programming becomes more and more complex it became necessary to abstract away some of that complexity with a series of tools. Some common functional pieces in a web application tool chain include:
+    - Code repository - Stores code in a shared, versioned, location.
+    - Linter - Removes, or warns, of non-idiomatic code usage.
+    - Prettier - Formats code according to a shared standard.
+    - Transpiler - Compiles code into a different format. For example, from JSX to JavaScript, TypeScript to JavaScript, or SCSS to CSS.
+    - Polyfill - Generates backward compatible code for supporting old browser versions that do not support the latest standards.
+    - Bundler - Packages code into bundles for delivery to the browser. This enables compatibility (for example with ES6 module support), or performance (with lazy loading).
+    - Minifier - Removes whitespace and renames variables in order to make code smaller and more efficient to deploy.
+    - Testing - Automated tests at multiple levels to ensure correctness.
+    - Deployment - Automated packaging and delivery of code from the development environment to the production environment.
+ 
+### Vite
+- to exit, use `ctrl + c`
+- run each command separately
+- be patient and give code time to run: sometimes it takes a while
+- to manipulate text on homepage, have to edit `App.jsx` file, not `index.html`
+
+### Router
+- A web framework router provides essential functionality for single-page applications. With a multiple-webpage application the headers, footers, navigation, and common components must be either duplicated in each HTML page, or injected before the server sends the page to the browser. With a single page application, the browser only loads one HTML page and then JavaScript is used to manipulate the DOM and give it the appearance of multiple pages. The router defines the routes a user can take through the application, and automatically manipulates the DOM to display the appropriate framework components.
