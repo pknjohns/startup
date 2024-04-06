@@ -652,3 +652,7 @@ Types of practice security web applications:
     - Immutability makes it very cheap for components to compare whether their data has changed or not, so you can skip re-rendering part of the tree that clearly wasn't affected by a change
 - the order in which you define functions doesn't matter
 - the `export default` keywords tell your `index.js` file which component to use as the top-level component from your App.js
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/767ef1f7-10bc-4036-bef8-9ba173821fc6>
+
+
