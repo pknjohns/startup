@@ -645,3 +645,4 @@ Types of practice security web applications:
 - To collect data from multiple children, or to have two child components communicate with each other, declare the shared state in their parent component instead. The parent component can pass that state back down to the children via props. This keeps the child components in sync with each other and with their parent.
     - Lifting state into a parent component is common when React components are refactored.
 - copy arrays with Javascript `slice()` command
+-  In React, it’s conventional to use `onSomething` names for props which represent events and `handleSomething` for the function definitions which handle those events.
