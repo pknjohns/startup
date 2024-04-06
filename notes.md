@@ -2,7 +2,7 @@
 
 # GitHub
 
-- GitHub is a valuable tool all developers use to track changes to code and ahve access to version history of their files
+- GitHub is a valuable tool all developers use to track changes to code and have access to version history of their files
 - it also keeps their code safe from being lost due to a computer dying
 
 - there are 4 things you should always get in the habit of when working with code:
@@ -636,3 +636,9 @@ Types of practice security web applications:
 ### Router
 - A web framework router provides essential functionality for single-page applications. With a multiple-webpage application the headers, footers, navigation, and common components must be either duplicated in each HTML page, or injected before the server sends the page to the browser. With a single page application, the browser only loads one HTML page and then JavaScript is used to manipulate the DOM and give it the appearance of multiple pages. The router defines the routes a user can take through the application, and automatically manipulates the DOM to display the appropriate framework components.
 - A basic implementation of the router consists of a `BrowserRouter` component that encapsulates the entire application and controls the routing action. The `Link`, or `NavLink`, component captures user navigation events and modifies what is rendered by the `Routes` component by matching up the `to` and `path` attributes.
+
+### Reactivity
+- React enables reactivity with three major pieces of a React component: `props`, `state`, and `render`.
+- When a component's JSX is rendered, React parses the JSX and creates a list of any references to the component's `state` or `prop` objects. React then monitors those objects and if it detects that they have changed it will call the component's `render` function so that the impact of the change is visualized.
+- components must start with a capital letter
+- components are like functions that you have to define. each contains all the html/css/JS you need to dynamically "react" to what the user is doing
