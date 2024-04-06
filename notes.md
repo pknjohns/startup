@@ -642,3 +642,6 @@ Types of practice security web applications:
 - When a component's JSX is rendered, React parses the JSX and creates a list of any references to the component's `state` or `prop` objects. React then monitors those objects and if it detects that they have changed it will call the component's `render` function so that the impact of the change is visualized.
 - components must start with a capital letter
 - components are like functions that you have to define. each contains all the html/css/JS you need to dynamically "react" to what the user is doing
+- To collect data from multiple children, or to have two child components communicate with each other, declare the shared state in their parent component instead. The parent component can pass that state back down to the children via props. This keeps the child components in sync with each other and with their parent.
+    - Lifting state into a parent component is common when React components are refactored.
+- 
