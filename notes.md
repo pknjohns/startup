@@ -646,3 +646,7 @@ Types of practice security web applications:
     - Lifting state into a parent component is common when React components are refactored.
 - copy arrays with Javascript `slice()` command
 -  In React, it’s conventional to use `onSomething` names for props which represent events and `handleSomething` for the function definitions which handle those events.
+- There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes
+- by not mutating (changing the underlying data) directly, you gain several benefit
+    - Avoiding direct data mutation lets you keep previous versions of the data intact, and reuse them later. so you can undo and redo actions
+    - Immutability makes it very cheap for components to compare whether their data has changed or not, so you can skip re-rendering part of the tree that clearly wasn't affected by a change
