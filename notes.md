@@ -651,3 +651,4 @@ Types of practice security web applications:
     - Avoiding direct data mutation lets you keep previous versions of the data intact, and reuse them later. so you can undo and redo actions
     - Immutability makes it very cheap for components to compare whether their data has changed or not, so you can skip re-rendering part of the tree that clearly wasn't affected by a change
 - the order in which you define functions doesn't matter
+- the `export default` keywords tell your `index.js` file which component to use as the top-level component from your App.js
