@@ -655,4 +655,4 @@ Types of practice security web applications:
 
 <img src=https://github.com/pknjohns/startup/assets/137959114/767ef1f7-10bc-4036-bef8-9ba173821fc6>
 
-
+- always try to avoid redundant state. 
