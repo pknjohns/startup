@@ -1,4 +1,9 @@
 import React from 'react';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Generate } from './generator/generator';
+import { Histories } from './history/history';
+import { About } from './about/about';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
