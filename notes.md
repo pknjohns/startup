@@ -656,3 +656,10 @@ Types of practice security web applications:
 <img src=https://github.com/pknjohns/startup/assets/137959114/767ef1f7-10bc-4036-bef8-9ba173821fc6>
 
 - always try to avoid redundant state. 
+
+### React hooks
+- React hooks allow React function style components to be able to do everything that a class style component can do and more. Additionally, as new features are added to React they are including them as hooks. This makes function style components the preferred way of doing things in React.
+- Ex:
+    - `useState`
+    - `useEffect`: use to represent lifecycle events
+- Note that hooks can only be used in function style components and must be called at the top scope of the function. That means a hook cannot be called inside of a loop or conditional. This restriction ensures that hooks are always called in the same order when a component is rendered.
