@@ -2,7 +2,7 @@
 
 # GitHub
 
-- GitHub is a valuable tool all developers use to track changes to code and ahve access to version history of their files
+- GitHub is a valuable tool all developers use to track changes to code and have access to version history of their files
 - it also keeps their code safe from being lost due to a computer dying
 
 - there are 4 things you should always get in the habit of when working with code:
@@ -532,3 +532,134 @@ const client = new MongoClient(url);
 
 # WebSocket
 - enables connections between 2 parties/devices
+
+# Security
+
+Common security community lingo:
+- Hacking - The process of making a system do something it's not supposed to do.
+- Exploit - Code or input that takes advantage of a programming or configuration flaw.
+- Attack Vector - The method that a hacker employs to penetrate and exploit a system.
+- Attack Surface - The exposed parts of a system that an attacker can access. For example, open ports (22, 443, 80), service endpoints, or user accounts.
+- Attack Payload - The actual code, or data, that a hacker delivers to a system in order to exploit it.
+- Input sanitization - "Cleaning" any input of potentially malicious data.
+- Black box testing - Testing an application without knowledge of the internals of the application.
+- White box testing - Testing an application by with knowledge of the source code and internal infrastructure.
+- Penetration Testing - Attempting to gain access to, or exploit, a system in ways that are not anticipated by the developers.
+- Mitigation - The action taken to remove, or reduce, a threat.
+
+Motivation for attackers:
+- Disruption - By overloading a system, encrypting essential data, or deleting critical infrastructure, an attacker can destroy normal business operations. This may be an attempt at extortion, or simply be an attempt to punish a business that that attacker does not agree with.
+- Data exfiltration - By privately extracting, or publicly exposing, a system's data, an attacker can embarrass the company, exploit insider information, sell the information to competitors, or leverage the information for additional attacks.
+- Resource consumption - By taking control of a company's computing resources an attacker can use it for other purposes such as mining cryptocurrency, gathering customer information, or attacking other systems.
+
+Common hacking techniques:
+- Injection: When an application interacts with a database on the backend, a programmer will often take user input and concatenate it directly into a search query. This allows a hacker can use a specially crafted query to make the database reveal hidden information or even delete the database.
+- Cross-Site Scripting (XSS): A category of attacks where an attacker can make malicious code execute on a different user's browser. If successful, an attacker can turn a website that a user trusts, into one that can steal passwords and hijack a user's account.
+- Denial of Service: This includes any attack where the main goal is to render any service inaccessible. This can be done by deleting a database using an SQL injection, by sending unexpected data to a service endpoint that causes the program to crash, or by simply making more requests than a server can handle.
+- Credential Stuffing: People have a tendency to reuse passwords or variations of passwords on different websites. If a hacker has a user's credentials from a previous website attack, then there is a good chance that they can successfully use those credentials on a different website. A hacker can also try to brute force attack a system by trying every possible combination of password.
+- Social engineering - Appealing to a human's desire to help, in order to gain unauthorized access or information.
+
+Best security practices:
+- Sanitize input data - Always assume that any data you receive from outside your system will be used to exploit your system. Consider if the input data can be turned into an executable expression, or can overload computing, bandwidth, or storage resources.
+- Logging - It is not possible to think of every way that your system can be exploited, but you can create an immutable log of requests that will expose when a system is being exploited. You can then trigger alerts, and periodically review the logs for unexpected activity.
+- Traps - Create what appears to be valuable information and then trigger alarms when the data is accessed.
+- Educate - Teach yourself, your users, and everyone you work with, to be security minded. Anyone who has access to your system should understand how to prevent physical, social, and software attacks.
+Reduce attack surfaces - Do not open access anymore than is necessary to properly provide your application. This includes what network ports are open, what account privileges are allowed, where you can access the system from, and what endpoints are available.
+- Layered security - Do not assume that one safeguard is enough. Create multiple layers of security that each take different approaches. For example, secure your physical environment, secure your network, secure your server, secure your public network traffic, secure your private network traffic, encrypt your storage, separate your production systems from your development systems, put your payment information in a separate environment from your application environment. Do not allow data from one layer to move to other layers. For example, do not allow an employee to take data out of the production system.
+- Least required access policy - Do not give any one user all the credentials necessary to control the entire system. Only give a user what access they need to do the work they are required to do.
+Safeguard credentials - Do not store credentials in accessible locations such as a public GitHub repository or a sticky note taped to a monitor. Automatically rotate credentials in order to limit the impact of an exposure. Only award credentials that are necessary to do a specific task.
+- Public review - Do not rely on obscurity to keep your system safe. Assume instead that an attacker knows everything about your system and then make it difficult for anyone to exploit the system. If you can attack your system, then a hacker will be able to also. By soliciting public review and the work of external penetration testers, you will be able to discover and remove potential exploits.
+
+### Most Important Web Application Security Risks:
+
+- A01 Broken Access Control: application doesn't properly enforce permissions on users. A non-admin can gain admin access/ permissions and do things they shouldn't be able to do
+- A02 Cryptographic Failues: sensitive data is accessible either without encryption, w/ weak encryption, or when cryptographic protections are ignored. Ex: using bad hashing algorithms (MD5 & SHA-1) or not validating the provided web certificate
+- A03 Injection: attacker is allowed to supply data and inject it into a context where it violates expected use of user input.
+- A04 Insecure Design: architectural flaws during design of application's system
+- A05 Security Misconfiguration: exploitation of application's configuration (default passwords, not updating software, exposing configuration settings, or enabling unsecured remote configuration).
+- A06 Vulnerable and Outdated Components: The longer an application has been deployed, the more likely it is that the attack surface, and corresponding exploits, of the application will increase. This is primarily due to the cost of maintaining an application and keeping it up to date in order to mitigate newly discovered exploits.Outdated components often accumulate as third party packages are used by the application. Over time the packages are updated in order to address security concerns, or sometimes the packages stop being supported. When this happens your application becomes vulnerable.
+- A07 Identification and Authentication Failures: any situation where a user's identity can be impersonated or assumed by an attacker. Additionally, if passwords are exposed outside of the application, or are stored inside the application, with weak cryptographic protection, then they are susceptible to attack.Another example of an identification failure would be a weak password recovery process that doesn't properly verify the user.
+- A08 Software and Data Integrity Failure: attacks that allow external software, processes, or data to compromise your application. Modern web applications extensively use open source and commercially produced packages to provide key functionality. Using these packages without conducting a security audit, gives them an unknown amount of control over your application. Likewise, using a third party processing workflow, or blindly accessing external data, opens you up to attacks.
+- A09 Security Logging and Monitoring Failures: One of the first things an attacker will do after penetrating your application is delete or alter any logs that might reveal the attacker's presence. A secure system will store logs that are accessible, immutable, and contain adequate information to detect an intrusion, and conduct post-mortem analysis. An attacker might also try to create a smoke screen in the monitoring system in order to hide a true attack. This might consist of a barrage of periodic ineffective attacks that hide the insertion of a slightly different effective one.
+- A10 Server Side Request Forgery (SSRF): causes the application service to make unintended internal requests, that utilized the service's elevated privileges, in order to expose internal data or services.
+
+### Security Practice
+
+Can use practice security web applications to internalize how security exploits work.
+Types of practice security web applications:
+- Gruyere provides tutorials and practice with things like Cross-site scripting (XSS), Denial of Service (DoS), SQL injection, and elevation of privilege attacks.
+- Juice Shop: have to download code to local machine
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/c8ed81e5-7476-4842-8768-c9b1084a3538>
+
+- You can solve the first hacking challenge by discovering the hidden score board view that shows you all of the possible challenges to solve, and exposes the available tutorials. You can discover where the score board is by examining the contents of the main.js file in Dev Tools and seeing that it references a path named score-board. So if you change the url to be localhost:3000/#/score-board you will see the following view.
+
+- start with DOM XSS tutorial
+
+# Web Frameworks
+
+### Web Frameworks
+- seek to make the job of writing web applications easier by providing tools for completing common application tasks.
+- Vue combines HTML, CSS, and JavaScript into a single file. HTML is represented by a template element that can be aggregated into other templates.
+- angular component: defines what Javascript, HTML, and CSS are combined together
+
+### React
+- focuses on making reactive web page components that automatically update based on user interactions or changes in the underlying data.
+- abstracts HTML into a Javascript vairant called JSX
+- JSX is converted into valid HTML and JavaScript using a preprocessor called Babel.
+
+#### React Components
+- allow you to modularize the functionality of your application. This allows the underlying code to directly represent the components that a user interacts with. It also enables code reuse as common application components often show up repeatedly.
+- One of the primary purposes of a component is to generate the user interface. This is done with the component's `render` function. Whatever is returned from the render function is inserted into the component HTML element.
+- Components can have properties and internal state
+- add state using `React.useState` hook function. It returns a variable containnig the current state and a function to update the state
+- Reactivity controls how a component reacts to actions taken by the user or events that happen within the application. Whenever a component's state or properties change, the render function for the component and all of its dependent component render functions are called.
+
+### Toolchains
+- As web programming becomes more and more complex it became necessary to abstract away some of that complexity with a series of tools. Some common functional pieces in a web application tool chain include:
+    - Code repository - Stores code in a shared, versioned, location.
+    - Linter - Removes, or warns, of non-idiomatic code usage.
+    - Prettier - Formats code according to a shared standard.
+    - Transpiler - Compiles code into a different format. For example, from JSX to JavaScript, TypeScript to JavaScript, or SCSS to CSS.
+    - Polyfill - Generates backward compatible code for supporting old browser versions that do not support the latest standards.
+    - Bundler - Packages code into bundles for delivery to the browser. This enables compatibility (for example with ES6 module support), or performance (with lazy loading).
+    - Minifier - Removes whitespace and renames variables in order to make code smaller and more efficient to deploy.
+    - Testing - Automated tests at multiple levels to ensure correctness.
+    - Deployment - Automated packaging and delivery of code from the development environment to the production environment.
+ 
+### Vite
+- to exit, use `ctrl + c`
+- run each command separately
+- be patient and give code time to run: sometimes it takes a while
+- to manipulate text on homepage, have to edit `App.jsx` file, not `index.html`
+
+### Router
+- A web framework router provides essential functionality for single-page applications. With a multiple-webpage application the headers, footers, navigation, and common components must be either duplicated in each HTML page, or injected before the server sends the page to the browser. With a single page application, the browser only loads one HTML page and then JavaScript is used to manipulate the DOM and give it the appearance of multiple pages. The router defines the routes a user can take through the application, and automatically manipulates the DOM to display the appropriate framework components.
+- A basic implementation of the router consists of a `BrowserRouter` component that encapsulates the entire application and controls the routing action. The `Link`, or `NavLink`, component captures user navigation events and modifies what is rendered by the `Routes` component by matching up the `to` and `path` attributes.
+
+### Reactivity
+- React enables reactivity with three major pieces of a React component: `props`, `state`, and `render`.
+- When a component's JSX is rendered, React parses the JSX and creates a list of any references to the component's `state` or `prop` objects. React then monitors those objects and if it detects that they have changed it will call the component's `render` function so that the impact of the change is visualized.
+- components must start with a capital letter
+- components are like functions that you have to define. each contains all the html/css/JS you need to dynamically "react" to what the user is doing
+- To collect data from multiple children, or to have two child components communicate with each other, declare the shared state in their parent component instead. The parent component can pass that state back down to the children via props. This keeps the child components in sync with each other and with their parent.
+    - Lifting state into a parent component is common when React components are refactored.
+- copy arrays with Javascript `slice()` command
+-  In React, it’s conventional to use `onSomething` names for props which represent events and `handleSomething` for the function definitions which handle those events.
+- There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes
+- by not mutating (changing the underlying data) directly, you gain several benefit
+    - Avoiding direct data mutation lets you keep previous versions of the data intact, and reuse them later. so you can undo and redo actions
+    - Immutability makes it very cheap for components to compare whether their data has changed or not, so you can skip re-rendering part of the tree that clearly wasn't affected by a change
+- the order in which you define functions doesn't matter
+- the `export default` keywords tell your `index.js` file which component to use as the top-level component from your App.js
+
+<img src=https://github.com/pknjohns/startup/assets/137959114/767ef1f7-10bc-4036-bef8-9ba173821fc6>
+
+- always try to avoid redundant state. 
+
+### React hooks
+- React hooks allow React function style components to be able to do everything that a class style component can do and more. Additionally, as new features are added to React they are including them as hooks. This makes function style components the preferred way of doing things in React.
+- Ex:
+    - `useState`
+    - `useEffect`: use to represent lifecycle events
+- Note that hooks can only be used in function style components and must be called at the top scope of the function. That means a hook cannot be called inside of a loop or conditional. This restriction ensures that hooks are always called in the same order when a component is rendered.
