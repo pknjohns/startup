@@ -6,4 +6,4 @@ export function Generator() {
         <div>generator displayed here</div>
       </main>
     );
-  }
+}
