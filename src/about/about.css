@@ -4,11 +4,11 @@ main {
     padding-bottom: 5px;
   }
 
-img {
+.picture-box {
     max-width: 100%;
     height: auto;
     border-radius: 25px;
-    border: 5px solid #fcfcfb;
+    border: 5px solid #10ccd3;
 }
 
 p {
@@ -16,7 +16,7 @@ p {
     margin: 50px;
 }
 
-#quote {
-    border: solid rgb(182, 182, 182) thin;
+.quote {
+    border: solid #10ccd3 thin;
     padding: 10px;
 }

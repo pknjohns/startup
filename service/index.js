@@ -23,7 +23,7 @@ app.use(express.static('public'));
 app.set('trust proxy', true);
 
 // Router for service endpoints
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
@@ -73,11 +73,11 @@ apiRouter.get('/user/:email', async (req, res) => {
 });
 
 // secureApiRouter verifies credentials for endpoints
-var secureApiRouter = express.Router();
+const secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-  authToken = req.cookies[authCookieName];
+  const authToken = req.cookies[authCookieName];
   const user = await DB.getUserByToken(authToken);
   if (user) {
     next();
@@ -87,7 +87,7 @@ secureApiRouter.use(async (req, res, next) => {
 });
 
 // GetHistories: histories are all entries in history table
-secureApiRouter.get('/histories', async (_req, res) => {
+secureApiRouter.get('/histories', async (req, res) => {
   const histories = await DB.getHistory();
   res.send(histories);
 });
