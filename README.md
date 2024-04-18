@@ -151,12 +151,12 @@ Have you and your special someone ever wanted to go on a date but not known what
 
 [x] - done - Prerequisite: Notes in your startup Git repository README.md file
 
-[x] -  - Prerequisite: At least 10 git commits made throughout the assignment period
+[x] - done - Prerequisite: At least 10 git commits made throughout the assignment period
 
-[x] -  - 10% Bundled using Vite
+[x] - done - 10% Bundled using Vite
 
-[x] -  - 30% Multiple functional react components
+[x] - done - 30% Multiple functional react components. I successfully implemented two of the 4 pages of my startup (login and about), and maybe a third as well, but I couldn't test its functionality without having my last page implemented.
 
-[x] -  - 30% React router
+[x] - done - 30% React router
 
-[x] -  - 30% React hooks
+[x] - maybe? - 30% React hooks. Not sure if it counts, but I can navigate between all four pages of my startup and the login and about pages are fully functional (minus my image on the about page that doesn't render when I deploy but does render when I host locally).
