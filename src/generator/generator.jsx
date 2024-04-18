@@ -1,4 +1,5 @@
 import React from 'react';
+import './generator.css';
 
 export function Generator() {
     return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './about.css';
 
 export function About() {
   const [quote, setQuote] = React.useState('Loading...');
