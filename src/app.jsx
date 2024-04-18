@@ -65,7 +65,7 @@ function App() {
                         exact
                     />
                     <Route path='/generator' element={<Generator userName={userName}/>} />
-                    <Route path='/histories' element={<Histories />} />
+                    <Route path='/histories' element={<Histories userName={userName}/>} />
                     <Route path='/about' element={<About />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
