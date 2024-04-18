@@ -4,11 +4,12 @@ main {
     padding-bottom: 5px;
   }
 
-.picture-box {
-    max-width: 100%;
-    height: auto;
+img {
+    max-width: 320px;
+    height: calc(400px + 1em);
+    margin-bottom: 1em;
     border-radius: 25px;
-    border: 5px solid #10ccd3;
+    border: 5px solid #0877df;
 }
 
 p {
@@ -16,7 +17,13 @@ p {
     margin: 50px;
 }
 
+.quote-box {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: solid #0877df thin;
+  }
+
 .quote {
-    border: solid #10ccd3 thin;
     padding: 10px;
 }
